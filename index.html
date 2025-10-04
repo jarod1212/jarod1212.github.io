@@ -2,19 +2,23 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
   <title>Jarod Lévy | PhD in AI & Neuroscience</title>
+
+  <meta name="description" content="Jarod Lévy — PhD student in AI & Neuroscience at Meta FAIR Paris. Research, publications, projects, weekly notes." />
+  <meta name="author" content="Jarod Lévy" />
+  <link rel="canonical" href="https://jarodlevy.com" />
+
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-
-  <!-- NAVBAR -->
+  <!-- STICKY HEADER: hides on scroll down, shows on scroll up -->
   <header id="navbar">
     <div class="nav-container">
-      <h1 id="name">Jarod Lévy</h1>
+      <a href="#hero" id="brand">Jarod Lévy</a>
       <nav>
-        <a href="#hero">Home</a>
         <a href="#articles">Articles</a>
+        <a href="#publications">Publications</a>
         <a href="#projects">Projects</a>
         <a href="#weekly">Weekly</a>
         <a href="#about">About</a>
@@ -25,170 +29,261 @@
   </header>
 
   <!-- HERO / BANNER -->
-  <section id="hero">
-    <div class="hero-content">
-      <img src="https://via.placeholder.com/200" alt="Jarod photo" class="profile" />
-      <h2>PhD Student in AI & Neuroscience at Meta FAIR Paris</h2>
-      <p>Based in Paris 🇫🇷 | GitHub • LinkedIn • Scholar • Twitter</p>
-      <div class="socials">
-        <a href="#">GitHub</a>
-        <a href="#">LinkedIn</a>
-        <a href="#">Scholar</a>
-        <a href="#">Twitter</a>
+  <section id="hero" class="reveal">
+    <div class="hero-inner">
+      <div class="hero-left">
+        <h1>Jarod Lévy</h1>
+        <p class="tagline">PhD in AI & Neuroscience — Meta FAIR Paris</p>
+        <p class="subtle">Paris, France</p>
+
+        <div class="socials">
+          <!-- Replace # with your links -->
+          <a href="#" aria-label="GitHub" class="icon" title="GitHub">
+            <!-- GitHub SVG -->
+            <svg viewBox="0 0 24 24" width="22" height="22" fill="currentColor" aria-hidden="true"><path d="M12 .5a12 12 0 0 0-3.79 23.4c.6.11.82-.26.82-.58l-.02-2.04c-3.34.73-4.04-1.61-4.04-1.61-.55-1.4-1.34-1.77-1.34-1.77-1.09-.75.08-.74.08-.74 1.2.09 1.83 1.24 1.83 1.24 1.07 1.83 2.81 1.3 3.5.99.11-.79.42-1.3.76-1.6-2.66-.3-5.47-1.33-5.47-5.93 0-1.31.47-2.38 1.24-3.22-.12-.3-.54-1.52.12-3.17 0 0 1.01-.32 3.3 1.23a11.5 11.5 0 0 1 6.01 0c2.29-1.55 3.3-1.23 3.3-1.23.66 1.65.24 2.87.12 3.17.77.84 1.24 1.9 1.24 3.22 0 4.61-2.81 5.62-5.49 5.92.43.37.81 1.1.81 2.22l-.01 3.29c0 .33.22.7.83.58A12 12 0 0 0 12 .5Z"/></svg>
+          </a>
+          <a href="#" aria-label="LinkedIn" class="icon" title="LinkedIn">
+            <!-- LinkedIn SVG -->
+            <svg viewBox="0 0 24 24" width="22" height="22" fill="currentColor" aria-hidden="true"><path d="M4.98 3.5A2.5 2.5 0 1 1 5 8.5a2.5 2.5 0 0 1 0-5Zm.02 5.5H2v12h3V9Zm4 0H6.98v12H10v-6.4c0-3.56 4-3.85 4 0V21h3v-6.98c0-6.07-6.58-5.85-7.98-2.86V9Z"/></svg>
+          </a>
+          <a href="#" aria-label="Google Scholar" class="icon" title="Google Scholar">
+            <!-- Scholar (book-ish) SVG -->
+            <svg viewBox="0 0 24 24" width="22" height="22" fill="currentColor" aria-hidden="true"><path d="M12 2 3 7l9 5 9-5-9-5Zm0 7L3 4v13a1 1 0 0 0 1.53.85L12 14l7.47 3.85A1 1 0 0 0 21 17V4l-9 5Z"/></svg>
+          </a>
+          <a href="#" aria-label="Twitter/X" class="icon" title="X">
+            <!-- X simple SVG -->
+            <svg viewBox="0 0 24 24" width="22" height="22" fill="currentColor" aria-hidden="true"><path d="M18.244 3H21l-6.5 7.429L22 21h-5.5l-4.3-5.5L7 21H4.244l6.9-7.885L2 3h5.5l3.9 5.062L18.244 3Zm-1.93 16h1.63L7.76 5h-1.63L16.314 19Z"/></svg>
+          </a>
+        </div>
       </div>
-      <div class="countdown">
-        <h3>PhD Progress</h3>
-        <div class="bar-bg"><div id="progress-bar"></div></div>
-        <p id="countdown"></p>
+
+      <div class="hero-right">
+        <!-- Replace with your photo -->
+        <img class="profile" src="https://via.placeholder.com/520x520.png?text=Your+Photo" alt="Jarod placeholder photo">
       </div>
+    </div>
+
+    <!-- PHD COUNTDOWN / PROGRESS -->
+    <div class="countdown">
+      <h3>PhD Progress</h3>
+      <div class="bar-bg"><div id="progress-bar"></div></div>
+      <p id="countdown"></p>
     </div>
   </section>
 
-  <!-- LATEST ARTICLES -->
-  <section id="articles">
-    <h2>Latest Articles</h2>
-    <div class="article">
-      <img src="https://via.placeholder.com/600x300" alt="Article 1" />
-      <div class="article-text">
-        <h3>Article Title 1</h3>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed non risus nulla.</p>
-      </div>
+  <!-- LATEST ARTICLES (2 big feature cards) -->
+  <section id="articles" class="reveal">
+    <div class="section-head">
+      <h2>Latest Articles</h2>
+      <p class="section-sub">Recent writing. Two featured posts.</p>
     </div>
-    <div class="article">
-      <img src="https://via.placeholder.com/600x300" alt="Article 2" />
-      <div class="article-text">
-        <h3>Article Title 2</h3>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed non risus nulla.</p>
+
+    <article class="card large">
+      <img src="https://images.unsplash.com/photo-1529101091764-c3526daf38fe?w=1200&q=80" alt="Article cover 1" />
+      <div class="card-body">
+        <h3>Article Title Placeholder One</h3>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur suscipit, nulla vitae porta dapibus, urna lorem gravida justo, vitae pulvinar arcu dolor id felis.</p>
+        <a class="ghost" href="#" target="_blank" rel="noopener">Read →</a>
       </div>
-    </div>
+    </article>
+
+    <article class="card large">
+      <img src="https://images.unsplash.com/photo-1518779578993-ec3579fee39f?w=1200&q=80" alt="Article cover 2" />
+      <div class="card-body">
+        <h3>Article Title Placeholder Two</h3>
+        <p>Integer non nisl id nibh tincidunt vestibulum. Cras nec velit id leo bibendum tincidunt. Sed et luctus nisi. Vivamus id arcu id ipsum mattis luctus.</p>
+        <a class="ghost" href="#" target="_blank" rel="noopener">Read →</a>
+      </div>
+    </article>
   </section>
 
   <!-- OTHER PUBLICATIONS -->
-  <section id="publications">
-    <h2>Other Publications</h2>
-    <ul>
-      <li>Minor paper 1 – Lorem ipsum description.</li>
-      <li>Minor paper 2 – Lorem ipsum description.</li>
-      <li>Minor paper 3 – Lorem ipsum description.</li>
+  <section id="publications" class="reveal">
+    <div class="section-head">
+      <h2>Other Publications</h2>
+      <p class="section-sub">Shorter items, preprints, notes.</p>
+    </div>
+    <ul class="pub-list">
+      <li><span class="pub-title">Minor Paper A</span> — Lorem ipsum dolor sit amet. <a href="#" target="_blank">PDF</a></li>
+      <li><span class="pub-title">Minor Paper B</span> — Consectetur adipiscing elit. <a href="#" target="_blank">PDF</a></li>
+      <li><span class="pub-title">Minor Paper C</span> — Sed do eiusmod tempor. <a href="#" target="_blank">PDF</a></li>
     </ul>
   </section>
 
-  <!-- PROJECTS -->
-  <section id="projects">
-    <h2>Projects</h2>
+  <!-- PROJECTS (video + description + image) -->
+  <section id="projects" class="reveal">
+    <div class="section-head">
+      <h2>Projects</h2>
+      <p class="section-sub">Visual demos and short descriptions.</p>
+    </div>
+
     <div class="project">
-      <video controls poster="https://via.placeholder.com/600x300"></video>
-      <div class="project-desc">
-        <h3>Project Title 1</h3>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus eu ligula tincidunt, consequat neque sit amet, commodo sapien.</p>
+      <div class="project-media">
+        <!-- Placeholder video: replace src or keep poster only -->
+        <video controls poster="https://images.unsplash.com/photo-1491972690050-ba117db4dc09?w=1200&q=80">
+          <source src="" type="video/mp4" />
+          Your browser does not support the video tag.
+        </video>
       </div>
-      <img src="https://via.placeholder.com/400x250" alt="Project image" />
+      <div class="project-text">
+        <h3>Project Title One</h3>
+        <p>Vivamus eu ligula tincidunt, consequat neque sit amet, commodo sapien. Nulla facilisi. Mauris tempor, dui vel iaculis pulvinar, felis justo elementum turpis, non feugiat ex risus nec arcu.</p>
+      </div>
+      <div class="project-image">
+        <img src="https://images.unsplash.com/photo-1542751371-adc38448a05e?w=900&q=80" alt="Project image placeholder" />
+      </div>
+    </div>
+
+    <div class="project">
+      <div class="project-media">
+        <video controls poster="https://images.unsplash.com/photo-1518770660439-4636190af475?w=1200&q=80">
+          <source src="" type="video/mp4" />
+        </video>
+      </div>
+      <div class="project-text">
+        <h3>Project Title Two</h3>
+        <p>Curabitur ut congue orci. Pellentesque dapibus, leo vel vestibulum dictum, lectus neque varius sem, vitae bibendum odio odio vitae sapien.</p>
+      </div>
+      <div class="project-image">
+        <img src="https://images.unsplash.com/photo-1518779578993-ec3579fee39f?w=900&q=80" alt="Project image placeholder 2" />
+      </div>
     </div>
   </section>
 
-  <!-- WEEKLY ARTICLES -->
-  <section id="weekly">
-    <h2>PhD Weekly Articles</h2>
-    <ul>
-      <li><a href="#">Week 01 – Lorem ipsum dolor sit amet</a></li>
-      <li><a href="#">Week 02 – Consectetur adipiscing elit</a></li>
-      <li><a href="#">Week 03 – Vivamus placerat nulla</a></li>
+  <!-- WEEKLY LINKS -->
+  <section id="weekly" class="reveal">
+    <div class="section-head">
+      <h2>PhD Weekly Articles</h2>
+      <p class="section-sub">Short weekly notes / reflections.</p>
+    </div>
+    <ul class="link-list">
+      <li><a href="#" target="_blank">Week 01 — Systems over goals</a></li>
+      <li><a href="#" target="_blank">Week 02 — Attention as a budget</a></li>
+      <li><a href="#" target="_blank">Week 03 — Event detection rabbit holes</a></li>
+      <li><a href="#" target="_blank">Week 04 — Why baselines matter</a></li>
     </ul>
   </section>
 
-<!-- ABOUT -->
-<section id="about">
-  <div class="about-container">
-    <div class="about-text">
-      <h2>About Me</h2>
-      <p>
-        I’m passionate about culture générale, neuroscience, and creative thinking.
-        This space mixes research and curiosity.  
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris porta
-        nulla vel justo tristique, sed bibendum leo pulvinar.  
-      </p>
-      <p>
-        I once appeared on <em>Question pour un Champion</em> 🎯 — proof that knowledge
-        can be playful. Lorem ipsum dolor sit amet, consectetur adipiscing elit,
-        sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-      </p>
-      <a href="#cv" class="cv-button">View My CV</a>
+  <!-- ABOUT -->
+  <section id="about" class="reveal">
+    <div class="about-container">
+      <div class="about-text">
+        <h2>About Me</h2>
+        <p>
+          I’m passionate about culture générale, neuroscience, and creative exploration.
+          Placeholder text for layout testing. Lorem ipsum dolor sit amet, consectetur
+          adipiscing elit. Mauris porta nulla vel justo tristique, sed bibendum leo pulvinar.
+        </p>
+        <p>
+          Once appeared on <em>Question pour un Champion</em> 🎯. More placeholder text:
+          Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.
+        </p>
+      </div>
+      <div class="about-photo-wrapper">
+        <img class="about-photo" src="https://images.unsplash.com/photo-1529626455594-4ff0802cfb7e?w=900&q=80" alt="About placeholder image" />
+      </div>
     </div>
-    <div class="about-photo-wrapper">
-      <img
-        src="https://images.unsplash.com/photo-1529626455594-4ff0802cfb7e?w=600"
-        alt="Jarod placeholder portrait"
-        class="about-photo"
-      />
-    </div>
-  </div>
-</section>
+  </section>
 
-  <!-- CV LINK -->
-  <section id="cv">
-    <h2>Curriculum Vitae</h2>
-    <a href="#" class="cv-button">View My CV (PDF)</a>
+  <!-- CV -->
+  <section id="cv" class="reveal">
+    <div class="cv-box">
+      <h2>Curriculum Vitae</h2>
+      <!-- Replace # with your PDF link -->
+      <a class="cta" href="#" target="_blank" rel="noopener">View CV (PDF)</a>
+    </div>
   </section>
 
   <!-- CONTACT -->
-  <section id="contact">
-    <h2>Contact</h2>
-    <p>Email me at <strong>jarod@example.com</strong> or reach out via social media below.</p>
-    <div class="socials">
-      <a href="#">GitHub</a>
-      <a href="#">LinkedIn</a>
-      <a href="#">Scholar</a>
-      <a href="#">Twitter</a>
+  <section id="contact" class="reveal">
+    <div class="contact-card">
+      <h2>Contact</h2>
+      <p>Email: <a href="mailto:hello@jarodlevy.com">hello@jarodlevy.com</a></p>
+      <div class="socials center">
+        <a href="#" class="icon" aria-label="GitHub"> <!-- same SVGs as above -->
+          <svg viewBox="0 0 24 24" width="22" height="22" fill="currentColor"><path d="M12 .5a12 12 0 0 0-3.79 23.4c.6.11.82-.26.82-.58l-.02-2.04c-3.34.73-4.04-1.61-4.04-1.61-.55-1.4-1.34-1.77-1.34-1.77-1.09-.75.08-.74.08-.74 1.2.09 1.83 1.24 1.83 1.24 1.07 1.83 2.81 1.3 3.5.99.11-.79.42-1.3.76-1.6-2.66-.3-5.47-1.33-5.47-5.93 0-1.31.47-2.38 1.24-3.22-.12-.3-.54-1.52.12-3.17 0 0 1.01-.32 3.3 1.23a11.5 11.5 0 0 1 6.01 0c2.29-1.55 3.3-1.23 3.3-1.23.66 1.65.24 2.87.12 3.17.77.84 1.24 1.9 1.24 3.22 0 4.61-2.81 5.62-5.49 5.92.43.37.81 1.1.81 2.22l-.01 3.29c0 .33.22.7.83.58A12 12 0 0 0 12 .5Z"/></svg>
+        </a>
+        <a href="#" class="icon" aria-label="LinkedIn">
+          <svg viewBox="0 0 24 24" width="22" height="22" fill="currentColor"><path d="M4.98 3.5A2.5 2.5 0 1 1 5 8.5a2.5 2.5 0 0 1 0-5Zm.02 5.5H2v12h3V9Zm4 0H6.98v12H10v-6.4c0-3.56 4-3.85 4 0V21h3v-6.98c0-6.07-6.58-5.85-7.98-2.86V9Z"/></svg>
+        </a>
+        <a href="#" class="icon" aria-label="Scholar">
+          <svg viewBox="0 0 24 24" width="22" height="22" fill="currentColor"><path d="M12 2 3 7l9 5 9-5-9-5Zm0 7L3 4v13a1 1 0 0 0 1.53.85L12 14l7.47 3.85A1 1 0 0 0 21 17V4l-9 5Z"/></svg>
+        </a>
+        <a href="#" class="icon" aria-label="X">
+          <svg viewBox="0 0 24 24" width="22" height="22" fill="currentColor"><path d="M18.244 3H21l-6.5 7.429L22 21h-5.5l-4.3-5.5L7 21H4.244l6.9-7.885L2 3h5.5l3.9 5.062L18.244 3Zm-1.93 16h1.63L7.76 5h-1.63L16.314 19Z"/></svg>
+        </a>
+      </div>
     </div>
   </section>
 
   <footer>
-    <p>© 2025 Jarod Lévy – All rights reserved.</p>
+    <p>© <span id="year"></span> Jarod Lévy — All rights reserved.</p>
   </footer>
 
+  <!-- Minimal JS: smooth nav highlight, header hide, reveal, PhD timer -->
   <script>
-  // Smooth scroll
-  document.querySelectorAll('a[href^="#"]').forEach(a=>{
-    a.addEventListener('click',e=>{
-      e.preventDefault();
-      document.querySelector(a.getAttribute('href')).scrollIntoView({behavior:"smooth"});
+    // Smooth scroll for anchor links
+    document.querySelectorAll('a[href^="#"]').forEach(a=>{
+      a.addEventListener('click',e=>{
+        e.preventDefault();
+        document.querySelector(a.getAttribute('href')).scrollIntoView({behavior:"smooth"});
+      });
     });
-  });
 
-  // Navbar highlight
-  const sections=document.querySelectorAll("section");
-  const navLinks=document.querySelectorAll("nav a");
-  window.addEventListener("scroll",()=>{
-    let current="";
-    sections.forEach(section=>{
-      const top=section.offsetTop;
-      const height=section.clientHeight;
-      if(scrollY>=top-height/3){current=section.getAttribute("id");}
+    // Navbar link highlight on scroll
+    const sections = document.querySelectorAll("section");
+    const navLinks = document.querySelectorAll("nav a");
+    window.addEventListener("scroll", ()=>{
+      let current = "";
+      sections.forEach(s=>{
+        const top = s.offsetTop - 120;
+        if(scrollY >= top) current = s.id;
+      });
+      navLinks.forEach(a=>{
+        a.classList.toggle("active", a.getAttribute("href")==="#"+current);
+      });
     });
-    navLinks.forEach(a=>{
-      a.classList.remove("active");
-      if(a.getAttribute("href")==="#"+current){a.classList.add("active");}
-    });
-  });
 
-  // PhD countdown
-  const start=new Date("Jan 1, 2025").getTime();
-  const end=new Date("Jan 1, 2028").getTime();
-  const countdown=document.getElementById("countdown");
-  const bar=document.getElementById("progress-bar");
-  function updatePhDTimer(){
-    const now=new Date().getTime();
-    const total=end-start;
-    const done=now-start;
-    const pct=Math.min(100,(done/total)*100);
-    bar.style.width=pct+"%";
-    const left=end-now;
-    const d=Math.floor(left/(1000*60*60*24));
-    countdown.textContent=`${d} days remaining until defense`;
-  }
-  updatePhDTimer();
-  setInterval(updatePhDTimer,3600000);
+    // Header hide on scroll down, show on scroll up
+    let lastY = 0;
+    const nav = document.getElementById("navbar");
+    window.addEventListener("scroll", ()=>{
+      const y = window.scrollY;
+      if (y > lastY && y > 120) nav.classList.add("hide");
+      else nav.classList.remove("hide");
+      lastY = y;
+    });
+
+    // Section reveal on enter
+    const io = new IntersectionObserver((entries)=>{
+      entries.forEach(e=>{
+        if(e.isIntersecting){ e.target.classList.add("revealed"); io.unobserve(e.target); }
+      });
+    }, {threshold: 0.12});
+    document.querySelectorAll(".reveal").forEach(el=>io.observe(el));
+
+    // PhD progress + countdown
+    const start = new Date("Jan 1, 2025 00:00:00").getTime();
+    const end   = new Date("Jan 1, 2028 00:00:00").getTime();
+    const bar   = document.getElementById("progress-bar");
+    const cdEl  = document.getElementById("countdown");
+    function updatePhD(){
+      const now = Date.now();
+      const total = end - start;
+      const done = Math.max(0, Math.min(total, now - start));
+      const pct = (done/total)*100;
+      if (bar) bar.style.width = pct.toFixed(2) + "%";
+      const left = Math.max(0, end - now);
+      const d = Math.floor(left/(1000*60*60*24));
+      const h = Math.floor((left%(1000*60*60*24))/(1000*60*60));
+      const m = Math.floor((left%(1000*60*60))/(1000*60));
+      if (cdEl) cdEl.textContent = `${d} days ${h}h ${m}m until defense`;
+    }
+    updatePhD();
+    setInterval(updatePhD, 60*1000);
+
+    // Year in footer
+    document.getElementById("year").textContent = new Date().getFullYear();
   </script>
-
 </body>
 </html>

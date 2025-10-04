@@ -1,55 +1,173 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Jarod Lévy | PhD in AI & Neuroscience</title>
-  <style>
-    body {
-      margin: 0;
-      padding: 0;
-      height: 100vh;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-      background: linear-gradient(135deg, #1b2735, #090a0f);
-      color: white;
-      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
-      text-align: center;
-    }
-    h1 { font-size: 2.5em; margin-bottom: 0.4em; }
-    h2 { font-weight: 400; font-size: 1.3em; color: #ccc; margin-bottom: 1.5em; }
-    p { font-size: 1em; color: #aaa; max-width: 400px; }
-    .dots {
-      display: flex;
-      justify-content: center;
-      margin-top: 2em;
-      gap: 0.5em;
-    }
-    .dot {
-      width: 10px;
-      height: 10px;
-      border-radius: 50%;
-      background: #666;
-      animation: pulse 1.2s infinite ease-in-out;
-    }
-    .dot:nth-child(2) { animation-delay: 0.2s; }
-    .dot:nth-child(3) { animation-delay: 0.4s; }
-    @keyframes pulse {
-      0%, 80%, 100% { opacity: 0.3; transform: scale(0.8); }
-      40% { opacity: 1; transform: scale(1.2); }
-    }
-  </style>
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-  <h1>Jarod Lévy</h1>
-  <h2>PhD in AI & Neuroscience – Meta FAIR Paris</h2>
-  <p>Website under construction. A better one is coming soon.</p>
-  <div class="dots">
-    <div class="dot"></div>
-    <div class="dot"></div>
-    <div class="dot"></div>
-  </div>
+
+  <!-- NAVBAR -->
+  <header id="navbar">
+    <div class="nav-container">
+      <h1 id="name">Jarod Lévy</h1>
+      <nav>
+        <a href="#hero">Home</a>
+        <a href="#articles">Articles</a>
+        <a href="#projects">Projects</a>
+        <a href="#weekly">Weekly</a>
+        <a href="#about">About</a>
+        <a href="#cv">CV</a>
+        <a href="#contact">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- HERO / BANNER -->
+  <section id="hero">
+    <div class="hero-content">
+      <img src="https://via.placeholder.com/200" alt="Jarod photo" class="profile" />
+      <h2>PhD Student in AI & Neuroscience at Meta FAIR Paris</h2>
+      <p>Based in Paris 🇫🇷 | GitHub • LinkedIn • Scholar • Twitter</p>
+      <div class="socials">
+        <a href="#">GitHub</a>
+        <a href="#">LinkedIn</a>
+        <a href="#">Scholar</a>
+        <a href="#">Twitter</a>
+      </div>
+      <div class="countdown">
+        <h3>PhD Progress</h3>
+        <div class="bar-bg"><div id="progress-bar"></div></div>
+        <p id="countdown"></p>
+      </div>
+    </div>
+  </section>
+
+  <!-- LATEST ARTICLES -->
+  <section id="articles">
+    <h2>Latest Articles</h2>
+    <div class="article">
+      <img src="https://via.placeholder.com/600x300" alt="Article 1" />
+      <div class="article-text">
+        <h3>Article Title 1</h3>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed non risus nulla.</p>
+      </div>
+    </div>
+    <div class="article">
+      <img src="https://via.placeholder.com/600x300" alt="Article 2" />
+      <div class="article-text">
+        <h3>Article Title 2</h3>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed non risus nulla.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- OTHER PUBLICATIONS -->
+  <section id="publications">
+    <h2>Other Publications</h2>
+    <ul>
+      <li>Minor paper 1 – Lorem ipsum description.</li>
+      <li>Minor paper 2 – Lorem ipsum description.</li>
+      <li>Minor paper 3 – Lorem ipsum description.</li>
+    </ul>
+  </section>
+
+  <!-- PROJECTS -->
+  <section id="projects">
+    <h2>Projects</h2>
+    <div class="project">
+      <video controls poster="https://via.placeholder.com/600x300"></video>
+      <div class="project-desc">
+        <h3>Project Title 1</h3>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus eu ligula tincidunt, consequat neque sit amet, commodo sapien.</p>
+      </div>
+      <img src="https://via.placeholder.com/400x250" alt="Project image" />
+    </div>
+  </section>
+
+  <!-- WEEKLY ARTICLES -->
+  <section id="weekly">
+    <h2>PhD Weekly Articles</h2>
+    <ul>
+      <li><a href="#">Week 01 – Lorem ipsum dolor sit amet</a></li>
+      <li><a href="#">Week 02 – Consectetur adipiscing elit</a></li>
+      <li><a href="#">Week 03 – Vivamus placerat nulla</a></li>
+    </ul>
+  </section>
+
+  <!-- ABOUT -->
+  <section id="about">
+    <h2>About Me</h2>
+    <img src="https://via.placeholder.com/400x400" alt="Photo placeholder" class="about-photo" />
+    <p>Passionate about culture générale and knowledge. Once on Question pour un Champion! Lorem ipsum dolor sit amet consectetur adipiscing elit sed do eiusmod tempor incididunt.</p>
+  </section>
+
+  <!-- CV LINK -->
+  <section id="cv">
+    <h2>Curriculum Vitae</h2>
+    <a href="#" class="cv-button">View My CV (PDF)</a>
+  </section>
+
+  <!-- CONTACT -->
+  <section id="contact">
+    <h2>Contact</h2>
+    <p>Email me at <strong>jarod@example.com</strong> or reach out via social media below.</p>
+    <div class="socials">
+      <a href="#">GitHub</a>
+      <a href="#">LinkedIn</a>
+      <a href="#">Scholar</a>
+      <a href="#">Twitter</a>
+    </div>
+  </section>
+
+  <footer>
+    <p>© 2025 Jarod Lévy – All rights reserved.</p>
+  </footer>
+
+  <script>
+  // Smooth scroll
+  document.querySelectorAll('a[href^="#"]').forEach(a=>{
+    a.addEventListener('click',e=>{
+      e.preventDefault();
+      document.querySelector(a.getAttribute('href')).scrollIntoView({behavior:"smooth"});
+    });
+  });
+
+  // Navbar highlight
+  const sections=document.querySelectorAll("section");
+  const navLinks=document.querySelectorAll("nav a");
+  window.addEventListener("scroll",()=>{
+    let current="";
+    sections.forEach(section=>{
+      const top=section.offsetTop;
+      const height=section.clientHeight;
+      if(scrollY>=top-height/3){current=section.getAttribute("id");}
+    });
+    navLinks.forEach(a=>{
+      a.classList.remove("active");
+      if(a.getAttribute("href")==="#"+current){a.classList.add("active");}
+    });
+  });
+
+  // PhD countdown
+  const start=new Date("Jan 1, 2025").getTime();
+  const end=new Date("Jan 1, 2028").getTime();
+  const countdown=document.getElementById("countdown");
+  const bar=document.getElementById("progress-bar");
+  function updatePhDTimer(){
+    const now=new Date().getTime();
+    const total=end-start;
+    const done=now-start;
+    const pct=Math.min(100,(done/total)*100);
+    bar.style.width=pct+"%";
+    const left=end-now;
+    const d=Math.floor(left/(1000*60*60*24));
+    countdown.textContent=`${d} days remaining until defense`;
+  }
+  updatePhDTimer();
+  setInterval(updatePhDTimer,3600000);
+  </script>
+
 </body>
 </html>

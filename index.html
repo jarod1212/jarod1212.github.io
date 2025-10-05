@@ -28,47 +28,76 @@
   </header>
 
   <!-- HERO -->
-  <section id="hero" class="reveal">
-    <div class="grid hero-grid">
-      <div class="hero-left">
-        <h1>Jarod Lévy</h1>
-        <p class="tagline">PhD Student — AI & Neuroscience</p>
-        <p class="subtle">MIND @ Inria × Brain&AI @ Meta FAIR Paris</p>
-        <p class="subtle">Paris, France</p>
+<section id="hero" class="hero-section">
+  <div class="hero-container">
+    <!-- LEFT PANEL -->
+    <div class="hero-left">
+      <img class="hero-photo" src="photo.jpeg" alt="Jarod Lévy portrait" />
+      <h1>Jarod Lévy</h1>
+      <p class="subtitle">PhD Student — AI & Neuroscience</p>
+      <p class="subtle mono">MIND @ Inria × Brain&AI @ Meta FAIR Paris</p>
+      <p class="subtle">Paris, France</p>
+    </div>
 
-        <div class="socials">
-          <a href="#" aria-label="GitHub" class="icon" title="GitHub">
-            <svg viewBox="0 0 24 24" width="22" height="22" fill="currentColor"><path d="M12 .5a12 12 0 0 0-3.79 23.4c.6.11.82-.26.82-.58l-.02-2.04c-3.34.73-4.04-1.61-4.04-1.61-.55-1.4-1.34-1.77-1.34-1.77-1.09-.75.08-.74.08-.74 1.2.09 1.83 1.24 1.83 1.24 1.07 1.83 2.81 1.3 3.5.99.11-.79.42-1.3.76-1.6-2.66-.3-5.47-1.33-5.47-5.93 0-1.31.47-2.38 1.24-3.22-.12-.3-.54-1.52.12-3.17 0 0 1.01-.32 3.3 1.23a11.5 11.5 0 0 1 6.01 0c2.29-1.55 3.3-1.23 3.3-1.23.66 1.65.24 2.87.12 3.17.77.84 1.24 1.9 1.24 3.22 0 4.61-2.81 5.62-5.49 5.92.43.37.81 1.1.81 2.22l-.01 3.29c0 .33.22.7.83.58A12 12 0 0 0 12 .5Z"/></svg>
-          </a>
-          <a href="#" aria-label="LinkedIn" class="icon" title="LinkedIn">
-            <svg viewBox="0 0 24 24" width="22" height="22" fill="currentColor"><path d="M4.98 3.5A2.5 2.5 0 1 1 5 8.5a2.5 2.5 0 0 1 0-5Zm.02 5.5H2v12h3V9Zm4 0H6.98v12H10v-6.4c0-3.56 4-3.85 4 0V21h3v-6.98c0-6.07-6.58-5.85-7.98-2.86V9Z"/></svg>
-          </a>
-          <a href="#" aria-label="Google Scholar" class="icon" title="Google Scholar">
-            <svg viewBox="0 0 24 24" width="22" height="22" fill="currentColor"><path d="M12 2 3 7l9 5 9-5-9-5Zm0 7L3 4v13a1 1 0 0 0 1.53.85L12 14l7.47 3.85A1 1 0 0 0 21 17V4l-9 5Z"/></svg>
-          </a>
-          <a href="#" aria-label="X" class="icon" title="X">
-            <svg viewBox="0 0 24 24" width="22" height="22" fill="currentColor"><path d="M18.244 3H21l-6.5 7.429L22 21h-5.5l-4.3-5.5L7 21H4.244l6.9-7.885L2 3h5.5l3.9 5.062L18.244 3Zm-1.93 16h1.63L7.76 5h-1.63L16.314 19Z"/></svg>
-          </a>
+    <!-- RIGHT PANEL -->
+    <div class="hero-right">
+      <p class="intro">
+        Hi! My name is <strong>Jarod</strong>. I’m a PhD student jointly at
+        <strong>Inria</strong> (MIND team) and <strong>Meta FAIR Paris</strong>
+        (Brain&AI team), supervised by
+        <a href="#" target="_blank">Stéphane d’Ascoli</a> and
+        <a href="#" target="_blank">Thomas Moreau</a>.
+      </p>
+      <p class="intro">
+        My research aims to <strong>decode communication in the human brain</strong>
+        using non-invasive neural recordings and deep learning. I build models that
+        connect neural dynamics and language.
+      </p>
+      <p class="intro">
+        Before my PhD, I was a research intern at
+        <strong>Meta</strong>, <strong>Institut Pasteur</strong>, and
+        <strong>New York Genome Center</strong>.
+      </p>
+
+      <div class="hero-icons">
+        <div class="icon-line">
+          <svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor"><path d="M12 2 3 7l9 5 9-5-9-5Z"/></svg>
+          <span>AI × Neuroscience researcher</span>
+        </div>
+        <div class="icon-line">
+          <svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor"><path d="M12 2a10 10 0 1 1 0 20 10 10 0 0 1 0-20Z"/></svg>
+          <span>Paris, France</span>
+        </div>
+        <div class="icon-line">
+          <svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor"><path d="M3 6h18v12H3z"/></svg>
+          <span>jarod.levy@inria.fr</span>
         </div>
       </div>
 
-      <div class="hero-right">
-        <img class="profile" src="photo.jpeg" alt="Jarod Lévy portrait">
-        <img class="brain-banner" src="brain-illu.png" alt="Brain banner">
+      <div class="hero-socials">
+        <a href="#" title="GitHub">🐙</a>
+        <a href="#" title="LinkedIn">in</a>
+        <a href="#" title="Google Scholar">G</a>
+        <a href="#" title="X/Twitter">X</a>
       </div>
     </div>
+  </div>
 
-  <!-- PHD COUNTDOWN -->
+  <!-- BACKGROUND SHAPE -->
+  <div class="hero-shape"></div>
+
+  <!-- BRAIN IMAGE UNDERLAY -->
+  <div class="brain-underlay">
+    <img src="brain-illu.png" alt="Brain illustration background" />
+  </div>
+
+  <!-- PHD PROGRESS -->
   <div class="countdown">
     <h3>Remaining time until the end of my PhD</h3>
-    <div class="time-grid mono" id="time-grid">
-      <div><span id="yy">0</span><label>years</label></div>
-      <div><span id="mm">0</span><label>months</label></div>
-    </div>
     <div class="bar-bg"><div id="progress-bar"></div></div>
     <p id="countdown" class="subtle mono tiny"></p>
   </div>
-
+</section>
   <!-- LEAD PUBLICATIONS (Thomas Fel-style layout) -->
   <section id="lead" class="reveal">
     <div class="section-head">

@@ -19,8 +19,7 @@
       <a href="#intro" class="brand">Jarod Lévy</a>
       <nav>
         <a href="#lead">Publications</a>
-        <a href="#talks">Talks and Slides</a>
-        <a href="#weekly">PhD Weekly</a>
+        <a href="#weekly">Writing</a>
         <a href="#cv">CV</a>
         <a href="#outside-work">Outside Work</a>
       </nav>
@@ -87,29 +86,42 @@
 
   <!-- LEAD PUBLICATIONS -->
   <section id="lead" class="reveal">
-    <div class="section-head"><h2>Lead publications</h2></div>
+    <div class="section-head"><h2>Publications</h2></div>
+
+    <h3 class="section-subhead">Lead Publications</h3>
 
     <article class="pub-row">
-      <div class="pub-rail"><span class="chip chip-primary">arXiv • 2025</span></div>
+      <div class="pub-rail"><span class="chip chip-primary">Under Review • 2025</span></div>
       <div class="pub-illustration">
-        <img src="brain-illu.png" alt="Brain-to-text decoding illustration">
+        <video src="decoded_sentences.mov" autoplay loop muted playsinline style="width: 100%; height: auto; border-radius: 12px; border: 1px solid var(--line); margin-bottom: 18px; clip-path: inset(0 0 0 1%);"></video>
+        <video src="animated_b2q_paper.mp4" autoplay loop muted playsinline style="width: 100%; height: auto; border-radius: 12px; border: 1px solid var(--line);"></video>
       </div>
       <div class="pub-body">
-        <h3>Brain-to-text decoding: A non-invasive approach via typing <span class="under-review">[UNDER REVIEW]</span></h3>
+        <h3>Brain-to-text decoding: A non-invasive approach via typing</h3>
         <p class="authors">J. Lévy, M. Zhang, S. Pinet, J. Rapin, H. Banville, S. d’Ascoli, J.-R. King</p>
         <p class="summary">
-          Non-invasive brain-to-text via typing: decoding models that map neural activity to discrete text
-          through a typing interface. Approach, benchmarks and decoded examples reported.
+          We present <strong>Brain2Qwerty</strong>, a deep learning model that decodes full sentences from non-invasive brain recordings (EEG and MEG) as participants type memorized sentences. In a cohort of 35 volunteers, <strong>Brain2Qwerty</strong> achieved an average character error rate of 32% with MEG and 67% with EEG, reaching 19% for the best individuals and generalizing to unseen sentences. Analyses reveal contributions from both motor and higher cognitive processes. These results bring non-invasive brain decoding closer to invasive neuroprostheses, paving the way for safe communication interfaces for patients unable to speak or move.
         </p>
         <div class="links">
-          <a class="ghost" href="https://arxiv.org/abs/2502.17480" target="_blank">arXiv</a>
-          <a class="ghost" href="#">Slides</a>
-          <a class="ghost" href="#">Meta article</a>
+          <a class="ghost" href="https://arxiv.org/abs/2502.17480" target="_blank">Paper (PDF)</a>
+          <a class="ghost" href="Brain2Qwerty.pptx" download>Slides</a>
+          <a class="ghost" href="https://ai.meta.com/research/publications/brain-to-text-decoding-a-non-invasive-approach-via-typing/" target="_blank">Meta Blog Post</a>
+          <a class="ghost" href="https://medium.com/predict/metas-ai-can-now-read-your-mind-yes-really-117916343757" target="_blank">Medium</a>
+          
+          <div class="links-subhead">They talk about us:</div>
+          <a class="ghost" href="https://www.bbc.com/audio/play/w3ct5wnj" target="_blank">BBC</a>
+          <a class="ghost" href="https://www.forbes.com/sites/luisromero/2025/02/19/metas-mind-reader-brain2qwerty-translates-thoughts-into-text/" target="_blank">Forbes</a>
+          <a class="ghost" href="https://www.technologyreview.com/2025/02/07/1111292/meta-has-an-ai-for-brain-typing-but-its-stuck-in-the-lab/" target="_blank">MIT Technology Review</a>
+          <a class="ghost" href="https://www.france.tv/documentaires/documentaires-societe/l-homme-a-la-machine/" target="_blank">France 2</a>
+          <a class="ghost" href="https://www.radiofrance.fr/franceinfo/podcasts/aujourd-hui-c-est-demain/meta-met-au-point-une-technique-permettant-d-ecrire-une-phrase-par-la-pensee-sans-avoir-recours-a-un-implant-cerebral-4382951" target="_blank">France Info</a>
+          <a class="ghost" href="https://www.deeplearning.ai/the-batch/tag/feb-26-2025/" target="_blank">Andrew Ng’s The Batch</a>
+          <a class="ghost" href="https://www.marktechpost.com/2025/02/09/meta-ai-introduces-brain2qwerty-a-new-deep-learning-model-for-decoding-sentences-from-brain-activity-with-eeg-or-meg-while-participants-typed-briefly-memorized-sentences-on-a-qwerty-keyboard/" target="_blank">MarkTechPost</a>
+          <a class="ghost" href="https://themunicheye.com/meta-achieves-80-accuracy-decoding-brain-activity-9981" target="_blank">The Munich Eye</a>
         </div>
       </div>
     </article>
 
-    <article class="pub-row">
+    <!-- <article class="pub-row">
       <div class="pub-rail"><span class="chip">GRETSI • 2025</span></div>
       <div class="pub-illustration">
         <img src="https://images.unsplash.com/photo-1518770660439-4636190af475?w=1000&q=80" alt="MEG EEG illustration">
@@ -126,80 +138,58 @@
         </div>
       </div>
     </article>
-  </section>
 
-  <!-- COLLABORATIONS -->
-  <section id="collab" class="reveal">
-    <div class="section-head"><h2>Collaborations & contributions</h2></div>
-    <div class="collab-grid">
-      <article class="collab-card">
-        <img src="https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?w=800&q=80" alt="">
-        <div class="cc-body">
-          <h3>From Thought to Action: Hierarchy of Neural Dynamics for Language Production</h3>
-          <p class="authors">M. Zhang, J. Lévy, S. d’Ascoli, J. Rapin, F. Alario, P. Bourdillon, S. Pinet, J.-R. King</p>
-          <p class="meta subtle">2025</p>
-        </div>
-      </article>
-      <article class="collab-card">
-        <img src="https://images.unsplash.com/photo-1559757175-08fda9a0087b?w=800&q=80" alt="">
-        <div class="cc-body">
-          <h3>Patients facing large language models in oncology: A narrative review</h3>
-          <p class="authors">C. Raynaud, D. Wu, J. Lévy, M. Marengo, J.-E. Bibault</p>
-          <p class="meta subtle">JCO Clinical Cancer Informatics • 2024</p>
-        </div>
-      </article>
-      <article class="collab-card">
-        <img src="https://images.unsplash.com/photo-1534759846116-5792a4a6bb47?w=800&q=80" alt="">
-        <div class="cc-body">
-          <h3>Silencing of amygdala circuits during sepsis prevents anxiety-related behaviours</h3>
-          <p class="authors">L. Bourhy, A. Mazeraud, L. H. A. Costa, J. Lévy, D. Rei, E. Hecquet, et al.</p>
-          <p class="meta subtle">Brain • 2022</p>
-        </div>
-      </article>
-    </div>
+    <h3 class="section-subhead">Collaborations</h3>
+
+    <article class="pub-row">
+      <div class="pub-rail"><span class="chip">2025</span></div>
+      <div class="pub-illustration">
+        <img src="https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?w=800&q=80" alt="Language production illustration">
+      </div>
+      <div class="pub-body">
+        <h3>From Thought to Action: Hierarchy of Neural Dynamics for Language Production</h3>
+        <p class="authors">M. Zhang, J. Lévy, S. d’Ascoli, J. Rapin, F. Alario, P. Bourdillon, S. Pinet, J.-R. King</p>
+      </div>
+    </article>
+
+    <article class="pub-row">
+      <div class="pub-rail"><span class="chip">JCO CCI • 2024</span></div>
+      <div class="pub-illustration">
+        <img src="https://images.unsplash.com/photo-1559757175-08fda9a0087b?w=800&q=80" alt="Oncology illustration">
+      </div>
+      <div class="pub-body">
+        <h3>Patients facing large language models in oncology: A narrative review</h3>
+        <p class="authors">C. Raynaud, D. Wu, J. Lévy, M. Marengo, J.-E. Bibault</p>
+      </div>
+    </article>
+
+    <article class="pub-row">
+      <div class="pub-rail"><span class="chip">Brain • 2022</span></div>
+      <div class="pub-illustration">
+        <img src="https://images.unsplash.com/photo-1534759846116-5792a4a6bb47?w=800&q=80" alt="Amygdala circuits illustration">
+      </div>
+      <div class="pub-body">
+        <h3>Silencing of amygdala circuits during sepsis prevents anxiety-related behaviours</h3>
+        <p class="authors">L. Bourhy, A. Mazeraud, L. H. A. Costa, J. Lévy, D. Rei, E. Hecquet, et al.</p>
+      </div>
+    </article>
+
+    <h3 class="section-subhead">Other Works</h3> -->
+    <!-- This is a placeholder for other works. You can add content here later. -->
   </section>
 
   <!-- WEEKLY -->
   <section id="weekly" class="reveal">
     <div class="section-head">
-      <h2>PhD Weekly Articles</h2>
-      <p class="section-sub">Recent reflections and notes.</p>
+      <h2>Writing</h2>
     </div>
-    <ul class="link-list">
-      <li><a href="#">L’intelligence, les IAs et nous — The human art of wonder</a></li>
-      <li><a href="#">Pourquoi apprendre une langue reste crucial à l’ère des traducteurs IA</a></li>
-      <li><a href="#">AGI: visions opposées et créativité humaine</a></li>
-      <li><a href="#">La réorientation silencieuse des certitudes (EN)</a></li>
-    </ul>
+    <p class="subtle mono" style="text-align: center;">This section is under construction. Stay tuned for updates!</p>
   </section>
 
   <!-- OUTSIDE WORK -->
   <section id="outside-work" class="reveal">
     <div class="section-head"><h2>Outside Work</h2></div>
     <p class="subtle mono">This section is under construction. Stay tuned for updates!</p>
-  </section>
-
-  <!-- TALKS -->
-  <section id="talks" class="reveal">
-    <div class="section-head"><h2>Talks & Slides</h2></div>
-    <div class="two-col">
-      <div>
-        <h3>Invited Talks</h3>
-        <ul class="bullets">
-          <li>2025 — GRETSI, Strasbourg • Institut Pasteur, Paris • Meta FAIR, London</li>
-          <li>2024 — FAIR Conference Workshop, New York</li>
-          <li>2022 — Cancer Symposium, Institut Pasteur</li>
-          <li>2019 — National Health Fair, Geneva</li>
-        </ul>
-      </div>
-      <div>
-        <h3>Slides</h3>
-        <ul class="bullets">
-          <li><a href="#">Brain2Qwerty (clean)</a></li>
-          <li><a href="#">Adapt your model not your preprocessing (FR)</a></li>
-        </ul>
-      </div>
-    </div>
   </section>
 
   <!-- CV -->

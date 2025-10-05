@@ -9,9 +9,24 @@
   <meta name="author" content="Jarod Lévy" />
   <link rel="canonical" href="https://jarodlevy.com" />
   <link rel="stylesheet" href="style.css" />
+  <!-- Iconify web component (prebuilt icons, no download needed) -->
+  <script src="https://cdn.jsdelivr.net/npm/iconify-icon@2.1.0/dist/iconify-icon.min.js" defer></script>
 </head>
 
 <body>
+  <header class="site-nav">
+    <div class="nav-inner">
+      <a href="#intro" class="brand">Jarod Lévy</a>
+      <nav>
+        <a href="#lead">Publications</a>
+        <a href="#talks">Talks and Slides</a>
+        <a href="#weekly">PhD Weekly</a>
+        <a href="#cv">CV</a>
+        <a href="#outside-work">Outside Work</a>
+      </nav>
+    </div>
+  </header>
+
   <!-- INTRO -->
   <section id="intro">
     <div class="intro-grid">
@@ -22,24 +37,38 @@
         <p class="mono small">MIND @ Inria × Brain&AI @ Meta FAIR Paris</p>
         <p class="mono small">Decoding communication through non-invasive brain recordings.</p>
         <p class="mono small subtle">Paris, France • <a href="mailto:jarod@meta.com">jarod@meta.com</a></p>
+        <div class="intro-logos">
+          <img src="meta.png" alt="Meta logo" class="intro-logo" />
+          <img src="inria.png" alt="Inria logo" class="intro-logo" />
+        </div>
       </div>
 
       <div class="intro-right">
         <p>
-          Hi! My name is Jarod. I’m a PhD student in the <strong>MIND team (Inria)</strong> and the
-          <strong>Brain&AI team (Meta FAIR Paris)</strong>, supervised by <strong>Stéphane d’Ascoli</strong>
-          and <strong>Thomas Moreau</strong>. I work closely with the Brain&AI team led by <strong>Jean-Rémi King</strong>.
+          Hi! My name is Jarod. I’m a PhD student at Inria and Meta in Paris. I am supervised by 
+          <a href="https://sdascoli.github.io/" target="_blank" rel="noopener noreferrer">Stéphane d’Ascoli</a>
+          and 
+          <a href="https://tommoral.github.io/about.html" target="_blank" rel="noopener noreferrer">Thomas Moreau</a>. 
+          I work with the Brain&AI team led by 
+          <a href="https://kingjr.github.io/" target="_blank" rel="noopener noreferrer">Jean-Rémi King</a>.
         </p>
         <p>
-          My research aims to understand how the brain communicates — from language to perception —
-          through artificial intelligence. I build and train models that decode neural signals into structured representations
-          such as text or meaning, advancing both cognitive neuroscience and brain–computer interface design.
+          My research is centered on  <strong>building AI models to better understand and decode the brain</strong> through non-invasive recordings.
+          Before this, I was a research intern at Meta, Institut Pasteur and New York Genome Center.
         </p>
         <div class="socials intro-socials">
-          <a href="#" title="Google Scholar"><i class="icon-scholar"></i></a>
-          <a href="#" title="GitHub"><i class="icon-github"></i></a>
-          <a href="#" title="Twitter"><i class="icon-x"></i></a>
-          <a href="#" title="LinkedIn"><i class="icon-linkedin"></i></a>
+          <a href="https://scholar.google.com/citations?user=jx5DNj0AAAAJ&hl=fr&oi=sra" title="Google Scholar" aria-label="Google Scholar">
+            <iconify-icon icon="simple-icons:googlescholar"></iconify-icon>
+          </a>
+          <a href="https://github.com/jarod1212" title="GitHub" aria-label="GitHub">
+            <iconify-icon icon="mdi:github"></iconify-icon>
+          </a>
+          <a href="https://x.com/JarodLevy" title="X (Twitter)" aria-label="X (Twitter)">
+            <iconify-icon icon="simple-icons:x"></iconify-icon>
+          </a>
+          <a href="https://www.linkedin.com/in/jarod-l%C3%A9vy-645b4214b/" title="LinkedIn" aria-label="LinkedIn">
+            <iconify-icon icon="mdi:linkedin"></iconify-icon>
+          </a>
         </div>
       </div>
     </div>
@@ -53,19 +82,6 @@
       </div>
       <div class="bar-bg"><div id="progress-bar"></div></div>
       <p id="countdown" class="subtle mono tiny"></p>
-    </div>
-
-    <!-- INTRO FOOTER -->
-    <div class="intro-footer">
-      <div class="intro-foot-left">
-        <p><strong>Jarod Lévy</strong><br>PhD Student, Meta FAIR × Inria</p>
-      </div>
-      <div class="intro-foot-center">
-        <p>© <span id="year"></span> Jarod Lévy. All rights reserved.</p>
-      </div>
-      <div class="intro-foot-right">
-        <p>📍 Paris (FR) | ✉️ <a href="mailto:jarod@meta.com">jarod@meta.com</a></p>
-      </div>
     </div>
   </section>
 
@@ -157,20 +173,10 @@
     </ul>
   </section>
 
-  <!-- ABOUT -->
-  <section id="about" class="reveal">
-    <div class="about-container">
-      <div class="about-text">
-        <h2>About me</h2>
-        <p>
-          I’m passionate about <strong>culture générale</strong>, neuroscience, and creative exploration.
-          Once appeared on <em>Question pour un Champion</em> 🎯.
-        </p>
-      </div>
-      <div class="about-photo-wrapper">
-        <img src="jarod.jpeg" alt="Jarod Lévy portrait" class="about-photo" />
-      </div>
-    </div>
+  <!-- OUTSIDE WORK -->
+  <section id="outside-work" class="reveal">
+    <div class="section-head"><h2>Outside Work</h2></div>
+    <p class="subtle mono">This section is under construction. Stay tuned for updates!</p>
   </section>
 
   <!-- TALKS -->
@@ -204,50 +210,31 @@
     </div>
   </section>
 
-  <!-- CONTACT -->
-  <section id="contact" class="reveal">
-    <div class="contact-card">
-      <h2>Contact</h2>
-      <p>Email: <a href="mailto:jarod@meta.com">jarod@meta.com</a></p>
-      <div class="socials center">
-        <a href="#" title="GitHub"><i class="icon-github"></i></a>
-        <a href="#" title="LinkedIn"><i class="icon-linkedin"></i></a>
-        <a href="#" title="Scholar"><i class="icon-scholar"></i></a>
-        <a href="#" title="X"><i class="icon-x"></i></a>
+  <footer class="intro-footer">
+    <div class="intro-foot-left">
+      <p><strong>Jarod Lévy</strong><br>PhD Student, Meta FAIR × Inria</p>
+    </div>
+    <div class="intro-foot-center">
+      <p>© <span id="year"></span> Jarod Lévy. All rights reserved.</p>
+    </div>
+    <div class="intro-foot-right">
+      <div class="socials footer-socials" aria-label="Social links">
+        <a href="#" title="Google Scholar" aria-label="Google Scholar">
+          <iconify-icon icon="simple-icons:googlescholar"></iconify-icon>
+        </a>
+        <a href="#" title="GitHub" aria-label="GitHub">
+          <iconify-icon icon="mdi:github"></iconify-icon>
+        </a>
+        <a href="#" title="X (Twitter)" aria-label="X (Twitter)">
+          <iconify-icon icon="simple-icons:x"></iconify-icon>
+        </a>
+        <a href="#" title="LinkedIn" aria-label="LinkedIn">
+          <iconify-icon icon="mdi:linkedin"></iconify-icon>
+        </a>
       </div>
     </div>
-  </section>
+  </footer>
 
-  <footer><p>© <span id="year"></span> Jarod Lévy — All rights reserved.</p></footer>
-
-  <script>
-    const start = new Date("Jan 1, 2025").getTime();
-    const end = new Date("Jan 5, 2028").getTime();
-    const bar = document.getElementById("progress-bar");
-    const cdTxt = document.getElementById("countdown");
-    const out = {yy:document.getElementById("yy"), mm:document.getElementById("mm")};
-    function diffYM(now, target){
-      const ms=Math.max(0,target-now);
-      const min=Math.floor(ms/60000);
-      const years=Math.floor(min/(60*24*365.25));
-      const remY=min-Math.floor(years*365.25*24*60);
-      const months=Math.floor(remY/(60*24*30.44));
-      return {years,months};
-    }
-    function updatePhD(){
-      const now=Date.now();
-      const total=end-start;
-      const done=Math.max(0,Math.min(total,now-start));
-      const pct=(done/total)*100;
-      if(bar) bar.style.width=pct.toFixed(2)+"%";
-      const d=diffYM(now,end);
-      out.yy.textContent=d.years;
-      out.mm.textContent=d.months;
-      cdTxt.textContent=(100-pct).toFixed(1)+"% remaining";
-    }
-    updatePhD();
-    setInterval(updatePhD,30000);
-    document.getElementById("year").textContent=new Date().getFullYear();
-  </script>
+  <script defer src="phd-timer.js"></script>
 </body>
 </html>

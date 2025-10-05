@@ -57,11 +57,8 @@ a:hover {
   padding: 100px 8% 40px;
   min-height: 100vh;
   background: var(--card);
-  background-image: url("brain-illu.png");
-  background-size: 55%;
-  background-position: right -150px center;
-  background-repeat: no-repeat;
-  background-attachment: fixed;
+  background-image: none; /* ensure no brain-illu background */
+  background-attachment: scroll; /* ensure normal scroll */
   box-shadow: var(--shadow);
 }
 
@@ -95,13 +92,42 @@ a:hover {
   margin-top: 4px;
 }
 
+/* Intro logos */
+.intro-logos {
+  display: flex;
+  gap: 12px;
+  margin-top: 8px;
+}
+.intro-logo {
+  height: 24px;
+  width: auto;
+  object-fit: contain;
+}
+
 /* RIGHT PANEL */
 .intro-right {
   font-size: 15px;
   color: #222;
+  position: relative;
+  background: rgba(255, 255, 255, 0.85);
+  border: 1px solid var(--line);
+  border-radius: 16px;
+  padding: 18px 20px;
+  box-shadow: var(--shadow);
+  backdrop-filter: saturate(1.05) blur(6px);
+  overflow: hidden;
 }
 .intro-right p strong {
   font-weight: 700;
+}
+.intro-right::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  background:
+    radial-gradient(600px 200px at 100% 0%, rgba(10,132,255,0.08), transparent 60%),
+    radial-gradient(500px 180px at 0% 100%, rgba(0,168,150,0.08), transparent 60%);
 }
 .intro-socials {
   display: flex;
@@ -123,6 +149,11 @@ a:hover {
 .intro-socials a:hover {
   transform: translateY(-2px);
   background: #f0f6ff;
+}
+/* icon size inside social buttons */
+.intro-socials iconify-icon {
+  font-size: 20px; /* inherits color from the link */
+  line-height: 1;
 }
 
 /* COUNTDOWN */
@@ -180,39 +211,13 @@ a:hover {
   color: var(--muted);
 }
 
-/* INTRO FOOTER */
-.intro-footer {
-  margin-top: 60px;
-  border-top: 1px solid var(--line);
-  padding-top: 20px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  color: var(--muted);
-  font-size: 14px;
-}
-.intro-footer a {
-  color: var(--muted);
-}
-.intro-footer a:hover {
-  color: var(--accent);
-}
-
 /* GENERIC SECTIONS */
 section {
   padding: 80px 6%;
   border-bottom: 1px solid var(--line);
   background: var(--bg);
-}
-.section-head {
-  max-width: 1100px;
-  margin: 0 auto 28px;
-}
-.section-head h2 {
-  font-size: 28px;
-}
-.section-sub {
-  color: var(--muted);
+  position: relative; /* anchor for pseudo-element */
+  scroll-margin-top: 70px; /* offset for sticky nav */
 }
 
 /* PUB ROW */
@@ -389,22 +394,113 @@ section {
   gap: 14px;
 }
 
+/* TOP NAV */
+.site-nav {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  background: var(--card);
+  border-bottom: 1px solid var(--line);
+  box-shadow: var(--shadow);
+}
+.nav-inner {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 10px 6%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.site-nav .brand {
+  font-weight: 800;
+  color: var(--fg);
+  text-decoration: none;
+}
+.site-nav nav {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+.site-nav nav a {
+  color: var(--fg);
+  text-decoration: none;
+  padding: 8px 10px;
+  border-radius: 8px;
+}
+.site-nav nav a:hover {
+  background: #eef3ff;
+  text-decoration: none;
+}
+
 /* FOOTER */
 footer {
-  text-align: center;
-  padding: 28px;
+  text-align: left; /* override generic footer centering */
+  margin-top: 60px;
+  border-top: 1px solid var(--line);
+  padding: 20px 3%; /* bring left/right closer to edges */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
   color: var(--muted);
+  font-size: 14px;
+}
+footer a {
+  color: var(--muted);
+}
+footer a:hover {
+  color: var(--accent);
+}
+/* footer social container */
+.footer-socials {
+  display: flex;
+  gap: 14px;
+  justify-content: center;
+}
+
+/* reuse social button styles for footer */
+.intro-socials a,
+.footer-socials a {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  border-radius: 10px;
+  background: var(--card);
+  border: 1px solid var(--line);
+  color: var(--fg);
+  transition: all 0.2s ease;
+}
+.intro-socials a:hover,
+.footer-socials a:hover {
+  transform: translateY(-2px);
+  background: #f0f6ff;
+}
+/* icon size inside social buttons */
+.intro-socials iconify-icon,
+.footer-socials iconify-icon {
+  font-size: 20px;
+  line-height: 1;
+}
+
+/* center content inside left and right areas */
+.intro-foot-left,
+.intro-foot-right {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
 }
 
 /* REVEAL */
 .reveal {
-  opacity: 0;
-  transform: translateY(14px);
-  transition: opacity 0.6s ease, transform 0.6s ease;
+  opacity: 1; /* was 0 */
+  transform: none; /* was translateY(14px) */
+  transition: none; /* disable animation */
 }
 .revealed {
   opacity: 1;
-  transform: translateY(0);
+  transform: none;
 }
 
 /* RESPONSIVE */
@@ -415,8 +511,9 @@ footer {
   }
   .intro-right {
     text-align: left;
+    padding: 16px;
   }
-  .intro-footer {
+  footer {
     flex-direction: column;
     gap: 10px;
   }

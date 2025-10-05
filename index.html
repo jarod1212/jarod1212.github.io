@@ -12,13 +12,11 @@
 </head>
 
 <body>
-
-  <!-- INTRO SECTION -->
+  <!-- INTRO -->
   <section id="intro">
     <div class="intro-grid">
-      <!-- LEFT SIDE -->
       <div class="intro-left">
-        <img src="assets/jarod.jpeg" alt="Jarod Lévy portrait" class="intro-photo" />
+        <img src="jarod.jpeg" alt="Jarod Lévy portrait" class="intro-photo" />
         <h1>Jarod Lévy</h1>
         <p class="mono role">PhD Student — AI × Neuroscience</p>
         <p class="mono small">MIND @ Inria × Brain&AI @ Meta FAIR Paris</p>
@@ -26,7 +24,6 @@
         <p class="mono small subtle">Paris, France • <a href="mailto:jarod@meta.com">jarod@meta.com</a></p>
       </div>
 
-      <!-- RIGHT SIDE -->
       <div class="intro-right">
         <p>
           Hi! My name is Jarod. I’m a PhD student in the <strong>MIND team (Inria)</strong> and the
@@ -39,15 +36,15 @@
           such as text or meaning, advancing both cognitive neuroscience and brain–computer interface design.
         </p>
         <div class="socials intro-socials">
-          <a href="#" aria-label="Google Scholar" title="Scholar"><i class="icon-scholar"></i></a>
-          <a href="#" aria-label="GitHub" title="GitHub"><i class="icon-github"></i></a>
-          <a href="#" aria-label="Twitter" title="Twitter"><i class="icon-x"></i></a>
-          <a href="#" aria-label="LinkedIn" title="LinkedIn"><i class="icon-linkedin"></i></a>
+          <a href="#" title="Google Scholar"><i class="icon-scholar"></i></a>
+          <a href="#" title="GitHub"><i class="icon-github"></i></a>
+          <a href="#" title="Twitter"><i class="icon-x"></i></a>
+          <a href="#" title="LinkedIn"><i class="icon-linkedin"></i></a>
         </div>
       </div>
     </div>
 
-    <!-- PHD COUNTDOWN -->
+    <!-- PHD TIMER -->
     <div class="countdown">
       <h3>Remaining time until the end of my PhD</h3>
       <div class="time-grid mono" id="time-grid">
@@ -67,44 +64,190 @@
         <p>© <span id="year"></span> Jarod Lévy. All rights reserved.</p>
       </div>
       <div class="intro-foot-right">
-        <p>📍 Paris (FR) &nbsp; | &nbsp; ✉️ <a href="mailto:jarod@meta.com">jarod@meta.com</a></p>
+        <p>📍 Paris (FR) | ✉️ <a href="mailto:jarod@meta.com">jarod@meta.com</a></p>
       </div>
     </div>
   </section>
 
+  <!-- LEAD PUBLICATIONS -->
+  <section id="lead" class="reveal">
+    <div class="section-head"><h2>Lead publications</h2></div>
+
+    <article class="pub-row">
+      <div class="pub-rail"><span class="chip chip-primary">arXiv • 2025</span></div>
+      <div class="pub-illustration">
+        <img src="brain-illu.png" alt="Brain-to-text decoding illustration">
+      </div>
+      <div class="pub-body">
+        <h3>Brain-to-text decoding: A non-invasive approach via typing <span class="under-review">[UNDER REVIEW]</span></h3>
+        <p class="authors">J. Lévy, M. Zhang, S. Pinet, J. Rapin, H. Banville, S. d’Ascoli, J.-R. King</p>
+        <p class="summary">
+          Non-invasive brain-to-text via typing: decoding models that map neural activity to discrete text
+          through a typing interface. Approach, benchmarks and decoded examples reported.
+        </p>
+        <div class="links">
+          <a class="ghost" href="https://arxiv.org/abs/2502.17480" target="_blank">arXiv</a>
+          <a class="ghost" href="#">Slides</a>
+          <a class="ghost" href="#">Meta article</a>
+        </div>
+      </div>
+    </article>
+
+    <article class="pub-row">
+      <div class="pub-rail"><span class="chip">GRETSI • 2025</span></div>
+      <div class="pub-illustration">
+        <img src="https://images.unsplash.com/photo-1518770660439-4636190af475?w=1000&q=80" alt="MEG EEG illustration">
+      </div>
+      <div class="pub-body">
+        <h3>Deep Learning sur les signaux M/EEG: Adaptez votre modèle, pas votre prétraitement</h3>
+        <p class="authors">J. Lévy, H. J. Banville, J.-R. King, S. Pinet, J. Rapin, S. d’Ascoli, T. Moreau</p>
+        <p class="summary">
+          Argument and evidence for adapting the model to raw M/EEG rather than aggressive preprocessing.
+          Benchmarks and ablations supporting model-first pipelines.
+        </p>
+        <div class="links">
+          <a class="ghost" href="https://gretsi.fr/data/colloque/pdf/2025_levy1559.pdf" target="_blank">Paper (PDF)</a>
+        </div>
+      </div>
+    </article>
+  </section>
+
+  <!-- COLLABORATIONS -->
+  <section id="collab" class="reveal">
+    <div class="section-head"><h2>Collaborations & contributions</h2></div>
+    <div class="collab-grid">
+      <article class="collab-card">
+        <img src="https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?w=800&q=80" alt="">
+        <div class="cc-body">
+          <h3>From Thought to Action: Hierarchy of Neural Dynamics for Language Production</h3>
+          <p class="authors">M. Zhang, J. Lévy, S. d’Ascoli, J. Rapin, F. Alario, P. Bourdillon, S. Pinet, J.-R. King</p>
+          <p class="meta subtle">2025</p>
+        </div>
+      </article>
+      <article class="collab-card">
+        <img src="https://images.unsplash.com/photo-1559757175-08fda9a0087b?w=800&q=80" alt="">
+        <div class="cc-body">
+          <h3>Patients facing large language models in oncology: A narrative review</h3>
+          <p class="authors">C. Raynaud, D. Wu, J. Lévy, M. Marengo, J.-E. Bibault</p>
+          <p class="meta subtle">JCO Clinical Cancer Informatics • 2024</p>
+        </div>
+      </article>
+      <article class="collab-card">
+        <img src="https://images.unsplash.com/photo-1534759846116-5792a4a6bb47?w=800&q=80" alt="">
+        <div class="cc-body">
+          <h3>Silencing of amygdala circuits during sepsis prevents anxiety-related behaviours</h3>
+          <p class="authors">L. Bourhy, A. Mazeraud, L. H. A. Costa, J. Lévy, D. Rei, E. Hecquet, et al.</p>
+          <p class="meta subtle">Brain • 2022</p>
+        </div>
+      </article>
+    </div>
+  </section>
+
+  <!-- WEEKLY -->
+  <section id="weekly" class="reveal">
+    <div class="section-head">
+      <h2>PhD Weekly Articles</h2>
+      <p class="section-sub">Recent reflections and notes.</p>
+    </div>
+    <ul class="link-list">
+      <li><a href="#">L’intelligence, les IAs et nous — The human art of wonder</a></li>
+      <li><a href="#">Pourquoi apprendre une langue reste crucial à l’ère des traducteurs IA</a></li>
+      <li><a href="#">AGI: visions opposées et créativité humaine</a></li>
+      <li><a href="#">La réorientation silencieuse des certitudes (EN)</a></li>
+    </ul>
+  </section>
+
+  <!-- ABOUT -->
+  <section id="about" class="reveal">
+    <div class="about-container">
+      <div class="about-text">
+        <h2>About me</h2>
+        <p>
+          I’m passionate about <strong>culture générale</strong>, neuroscience, and creative exploration.
+          Once appeared on <em>Question pour un Champion</em> 🎯.
+        </p>
+      </div>
+      <div class="about-photo-wrapper">
+        <img src="jarod.jpeg" alt="Jarod Lévy portrait" class="about-photo" />
+      </div>
+    </div>
+  </section>
+
+  <!-- TALKS -->
+  <section id="talks" class="reveal">
+    <div class="section-head"><h2>Talks & Slides</h2></div>
+    <div class="two-col">
+      <div>
+        <h3>Invited Talks</h3>
+        <ul class="bullets">
+          <li>2025 — GRETSI, Strasbourg • Institut Pasteur, Paris • Meta FAIR, London</li>
+          <li>2024 — FAIR Conference Workshop, New York</li>
+          <li>2022 — Cancer Symposium, Institut Pasteur</li>
+          <li>2019 — National Health Fair, Geneva</li>
+        </ul>
+      </div>
+      <div>
+        <h3>Slides</h3>
+        <ul class="bullets">
+          <li><a href="#">Brain2Qwerty (clean)</a></li>
+          <li><a href="#">Adapt your model not your preprocessing (FR)</a></li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- CV -->
+  <section id="cv" class="reveal">
+    <div class="cv-box">
+      <h2>Curriculum Vitae</h2>
+      <a class="cta" href="CV.pdf" target="_blank">View CV (PDF)</a>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section id="contact" class="reveal">
+    <div class="contact-card">
+      <h2>Contact</h2>
+      <p>Email: <a href="mailto:jarod@meta.com">jarod@meta.com</a></p>
+      <div class="socials center">
+        <a href="#" title="GitHub"><i class="icon-github"></i></a>
+        <a href="#" title="LinkedIn"><i class="icon-linkedin"></i></a>
+        <a href="#" title="Scholar"><i class="icon-scholar"></i></a>
+        <a href="#" title="X"><i class="icon-x"></i></a>
+      </div>
+    </div>
+  </section>
+
+  <footer><p>© <span id="year"></span> Jarod Lévy — All rights reserved.</p></footer>
+
   <script>
-    // PhD countdown
-    const start = new Date("Jan 1, 2025 00:00:00").getTime();
-    const end = new Date("Jan 5, 2028 00:00:00").getTime();
+    const start = new Date("Jan 1, 2025").getTime();
+    const end = new Date("Jan 5, 2028").getTime();
     const bar = document.getElementById("progress-bar");
     const cdTxt = document.getElementById("countdown");
-    const out = {yy: document.getElementById("yy"), mm: document.getElementById("mm")};
-
-    function diffYM(now, target) {
-      const ms = Math.max(0, target - now);
-      const minutes = Math.floor(ms / 60000);
-      const years = Math.floor(minutes / (60 * 24 * 365.25));
-      const remY = minutes - Math.floor(years * 365.25 * 24 * 60);
-      const months = Math.floor(remY / (60 * 24 * 30.44));
-      return {years, months};
+    const out = {yy:document.getElementById("yy"), mm:document.getElementById("mm")};
+    function diffYM(now, target){
+      const ms=Math.max(0,target-now);
+      const min=Math.floor(ms/60000);
+      const years=Math.floor(min/(60*24*365.25));
+      const remY=min-Math.floor(years*365.25*24*60);
+      const months=Math.floor(remY/(60*24*30.44));
+      return {years,months};
     }
-
-    function updatePhD() {
-      const now = Date.now();
-      const total = end - start;
-      const done = Math.max(0, Math.min(total, now - start));
-      const pct = (done / total) * 100;
-      if (bar) bar.style.width = pct.toFixed(2) + "%";
-
-      const d = diffYM(now, end);
-      out.yy.textContent = d.years;
-      out.mm.textContent = d.months;
-      cdTxt.textContent = `${(100 - pct).toFixed(1)}% remaining`;
+    function updatePhD(){
+      const now=Date.now();
+      const total=end-start;
+      const done=Math.max(0,Math.min(total,now-start));
+      const pct=(done/total)*100;
+      if(bar) bar.style.width=pct.toFixed(2)+"%";
+      const d=diffYM(now,end);
+      out.yy.textContent=d.years;
+      out.mm.textContent=d.months;
+      cdTxt.textContent=(100-pct).toFixed(1)+"% remaining";
     }
     updatePhD();
-    setInterval(updatePhD, 1000 * 30);
-    document.getElementById("year").textContent = new Date().getFullYear();
+    setInterval(updatePhD,30000);
+    document.getElementById("year").textContent=new Date().getFullYear();
   </script>
-
 </body>
 </html>

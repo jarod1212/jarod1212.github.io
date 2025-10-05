@@ -5,366 +5,106 @@
   <meta name="viewport" content="width=device-width,initial-scale=1" />
   <title>Jarod Lévy | AI × Neuroscience</title>
 
-  <meta name="description" content="Jarod Lévy — PhD student in AI & Neuroscience (MIND @ Inria × Brain&AI @ Meta FAIR Paris). Brain decoding, neural communication, non-invasive interfaces." />
+  <meta name="description" content="Jarod Lévy — PhD student in AI & Neuroscience at Meta FAIR Paris and Inria MIND. Brain decoding, neural communication, non-invasive interfaces." />
   <meta name="author" content="Jarod Lévy" />
   <link rel="canonical" href="https://jarodlevy.com" />
   <link rel="stylesheet" href="style.css" />
 </head>
+
 <body>
-  <!-- STICKY HEADER -->
-  <header id="navbar">
-    <div class="nav-container">
-      <a href="#hero" id="brand">Jarod Lévy</a>
-      <nav>
-        <a href="#lead">Lead publications</a>
-        <a href="#collab">Collaborations</a>
-        <a href="#weekly">Weekly</a>
-        <a href="#about">About</a>
-        <a href="#talks">Talks</a>
-        <a href="#cv">CV</a>
-        <a href="#contact">Contact</a>
-      </nav>
-    </div>
-  </header>
 
-  <!-- HERO -->
-<section id="hero" class="hero-section">
-  <div class="hero-container">
-    <!-- LEFT PANEL -->
-    <div class="hero-left">
-      <img class="hero-photo" src="photo.jpeg" alt="Jarod Lévy portrait" />
-      <h1>Jarod Lévy</h1>
-      <p class="subtitle">PhD Student — AI & Neuroscience</p>
-      <p class="subtle mono">MIND @ Inria × Brain&AI @ Meta FAIR Paris</p>
-      <p class="subtle">Paris, France</p>
-    </div>
-
-    <!-- RIGHT PANEL -->
-    <div class="hero-right">
-      <p class="intro">
-        Hi! My name is <strong>Jarod</strong>. I’m a PhD student jointly at
-        <strong>Inria</strong> (MIND team) and <strong>Meta FAIR Paris</strong>
-        (Brain&AI team), supervised by
-        <a href="#" target="_blank">Stéphane d’Ascoli</a> and
-        <a href="#" target="_blank">Thomas Moreau</a>.
-      </p>
-      <p class="intro">
-        My research aims to <strong>decode communication in the human brain</strong>
-        using non-invasive neural recordings and deep learning. I build models that
-        connect neural dynamics and language.
-      </p>
-      <p class="intro">
-        Before my PhD, I was a research intern at
-        <strong>Meta</strong>, <strong>Institut Pasteur</strong>, and
-        <strong>New York Genome Center</strong>.
-      </p>
-
-      <div class="hero-icons">
-        <div class="icon-line">
-          <svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor"><path d="M12 2 3 7l9 5 9-5-9-5Z"/></svg>
-          <span>AI × Neuroscience researcher</span>
-        </div>
-        <div class="icon-line">
-          <svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor"><path d="M12 2a10 10 0 1 1 0 20 10 10 0 0 1 0-20Z"/></svg>
-          <span>Paris, France</span>
-        </div>
-        <div class="icon-line">
-          <svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor"><path d="M3 6h18v12H3z"/></svg>
-          <span>jarod.levy@inria.fr</span>
-        </div>
+  <!-- INTRO SECTION -->
+  <section id="intro">
+    <div class="intro-grid">
+      <!-- LEFT SIDE -->
+      <div class="intro-left">
+        <img src="assets/jarod.jpeg" alt="Jarod Lévy portrait" class="intro-photo" />
+        <h1>Jarod Lévy</h1>
+        <p class="mono role">PhD Student — AI × Neuroscience</p>
+        <p class="mono small">MIND @ Inria × Brain&AI @ Meta FAIR Paris</p>
+        <p class="mono small">Decoding communication through non-invasive brain recordings.</p>
+        <p class="mono small subtle">Paris, France • <a href="mailto:jarod@meta.com">jarod@meta.com</a></p>
       </div>
 
-      <div class="hero-socials">
-        <a href="#" title="GitHub">🐙</a>
-        <a href="#" title="LinkedIn">in</a>
-        <a href="#" title="Google Scholar">G</a>
-        <a href="#" title="X/Twitter">X</a>
-      </div>
-    </div>
-  </div>
-
-  <!-- BACKGROUND SHAPE -->
-  <div class="hero-shape"></div>
-
-  <!-- BRAIN IMAGE UNDERLAY -->
-  <div class="brain-underlay">
-    <img src="brain-illu.png" alt="Brain illustration background" />
-  </div>
-
-  <!-- PHD PROGRESS -->
-  <div class="countdown">
-    <h3>Remaining time until the end of my PhD</h3>
-    <div class="bar-bg"><div id="progress-bar"></div></div>
-    <p id="countdown" class="subtle mono tiny"></p>
-  </div>
-</section>
-  <!-- LEAD PUBLICATIONS (Thomas Fel-style layout) -->
-  <section id="lead" class="reveal">
-    <div class="section-head">
-      <h2>Lead publications</h2>
-    </div>
-
-    <!-- PAPER 1 -->
-    <article class="pub-row">
-      <div class="pub-rail">
-        <span class="chip chip-primary">arXiv • 2025</span>
-      </div>
-      <div class="pub-illustration">
-        <!-- animated/illustration placeholder -->
-        <img src="https://images.unsplash.com/photo-1491972690050-ba117db4dc09?w=1200&q=80" alt="Brain-to-text decoding illustration">
-      </div>
-      <div class="pub-body">
-        <h3>Brain-to-text decoding: A non-invasive approach via typing <span class="under-review">[UNDER REVIEW]</span></h3>
-        <p class="authors">J. Lévy, M. Zhang, S. Pinet, J. Rapin, H. Banville, S. d’Ascoli, J.-R. King</p>
-        <p class="summary">
-          Non-invasive brain-to-text via typing: we design and evaluate decoding models that map neural activity to discrete text through a typing interface. Approach, benchmarks and decoded examples reported.
-        </p>
-        <div class="links">
-          <a class="ghost" href="https://arxiv.org/abs/2502.17480" target="_blank" rel="noopener">arXiv</a>
-          <a class="ghost" href="#" target="_blank" rel="noopener">Slides</a>
-          <a class="ghost" href="#" target="_blank" rel="noopener">Meta article</a>
-          <details class="media">
-            <summary>Media coverage</summary>
-            <ul>
-              <li><a href="#" target="_blank">BBC Radio</a></li>
-              <li><a href="#" target="_blank">MIT Technology Review</a></li>
-              <li><a href="#" target="_blank">France 2</a></li>
-              <li><a href="#" target="_blank">France Info</a></li>
-              <li><a href="#" target="_blank">Le Figaro</a></li>
-              <li><a href="#" target="_blank">Andrew Ng’s The Batch</a></li>
-              <li><a href="#" target="_blank">Vox (threads)</a></li>
-              <li><a href="#" target="_blank">Forbes</a></li>
-            </ul>
-          </details>
-        </div>
-      </div>
-    </article>
-
-    <!-- PAPER 2 -->
-    <article class="pub-row">
-      <div class="pub-rail">
-        <span class="chip">GRETSI • 2025</span>
-      </div>
-      <div class="pub-illustration">
-        <img src="https://images.unsplash.com/photo-1518770660439-4636190af475?w=1200&q=80" alt="MEG/EEG figure placeholder">
-      </div>
-      <div class="pub-body">
-        <h3>Deep Learning sur les signaux M/EEG: Adaptez votre modèle, pas votre prétraitement</h3>
-        <p class="authors">J. Lévy, H. J. Banville, J.-R. King, S. Pinet, J. Rapin, S. d’Ascoli, T. Moreau</p>
-        <p class="summary">
-          Argument and evidence for adapting the model to raw M/EEG rather than aggressive preprocessing. Benchmarks and ablations supporting model-first pipelines.
-        </p>
-        <div class="links">
-          <a class="ghost" href="https://gretsi.fr/data/colloque/pdf/2025_levy1559.pdf" target="_blank" rel="noopener">Paper (PDF)</a>
-          <a class="ghost" href="#" target="_blank" rel="noopener">Slides</a>
-        </div>
-      </div>
-    </article>
-  </section>
-
-  <!-- COLLABORATIONS & CONTRIBUTIONS -->
-  <section id="collab" class="reveal">
-    <div class="section-head">
-      <h2>Collaborations & contributions</h2>
-    </div>
-
-    <div class="collab-grid">
-      <article class="collab-card">
-        <img src="https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?w=800&q=80" alt="Language production">
-        <div class="cc-body">
-          <h3>From Thought to Action: Hierarchy of Neural Dynamics for Language Production</h3>
-          <p class="authors">M. Zhang, J. Lévy, S. d’Ascoli, J. Rapin, F. Alario, P. Bourdillon, S. Pinet, J.-R. King</p>
-          <p class="meta subtle">2025</p>
-          <a class="ghost" href="#" target="_blank">Preprint</a>
-        </div>
-      </article>
-
-      <article class="collab-card">
-        <img src="https://images.unsplash.com/photo-1559757175-08fda9a0087b?w=800&q=80" alt="Oncology + LLMs">
-        <div class="cc-body">
-          <h3>Patients facing large language models in oncology: A narrative review</h3>
-          <p class="authors">C. Raynaud, D. Wu, J. Lévy, M. Marengo, J.-E. Bibault</p>
-          <p class="meta subtle">JCO Clinical Cancer Informatics • 2024</p>
-          <a class="ghost" href="#" target="_blank">Journal</a>
-        </div>
-      </article>
-
-      <article class="collab-card">
-        <img src="https://images.unsplash.com/photo-1534759846116-5792a4a6bb47?w=800&q=80" alt="Amygdala circuits">
-        <div class="cc-body">
-          <h3>Silencing of amygdala circuits during sepsis prevents anxiety-related behaviours</h3>
-          <p class="authors">L. Bourhy, A. Mazeraud, L. H. A. Costa, J. Lévy, D. Rei, E. Hecquet, et al.</p>
-          <p class="meta subtle">Brain • 2022</p>
-          <a class="ghost" href="#" target="_blank">Journal</a>
-        </div>
-      </article>
-    </div>
-  </section>
-
-  <!-- WEEKLY -->
-  <section id="weekly" class="reveal">
-    <div class="section-head">
-      <h2>PhD Weekly Articles</h2>
-      <p class="section-sub">Curated reflections and long-form notes.</p>
-    </div>
-    <ul class="link-list">
-      <li><a href="#" target="_blank">L’intelligence, les IAs et nous — The human art of wonder</a></li>
-      <li><a href="#" target="_blank">Pourquoi apprendre une langue reste crucial à l’ère des traducteurs IA</a></li>
-      <li><a href="#" target="_blank">AGI: visions opposées et créativité humaine</a></li>
-      <li><a href="#" target="_blank">La réorientation silencieuse des certitudes (EN)</a></li>
-    </ul>
-  </section>
-
-  <!-- ABOUT -->
-  <section id="about" class="reveal">
-    <div class="about-container">
-      <div class="about-text">
-        <h2>About me</h2>
+      <!-- RIGHT SIDE -->
+      <div class="intro-right">
         <p>
-          PhD student in the <strong>MIND team (Inria)</strong> and the <strong>Brain&AI team (Meta FAIR Paris)</strong>,
-          supervised by <a href="#" target="_blank">Stéphane d’Ascoli</a> and <a href="#" target="_blank">Thomas Moreau</a>,
-          working closely with the Brain & AI group led by <strong>Jean-Rémi King</strong>.
+          Hi! My name is Jarod. I’m a PhD student in the <strong>MIND team (Inria)</strong> and the
+          <strong>Brain&AI team (Meta FAIR Paris)</strong>, supervised by <strong>Stéphane d’Ascoli</strong>
+          and <strong>Thomas Moreau</strong>. I work closely with the Brain&AI team led by <strong>Jean-Rémi King</strong>.
         </p>
         <p>
-          I build AI models to understand and decode the brain, with a focus on non-invasive communication decoding.
-          PhD defense planned for <strong>January 2028</strong>. Previously: research intern at Meta, Institut Pasteur,
-          and the New York Genome Center.
+          My research aims to understand how the brain communicates — from language to perception —
+          through artificial intelligence. I build and train models that decode neural signals into structured representations
+          such as text or meaning, advancing both cognitive neuroscience and brain–computer interface design.
         </p>
-        <p class="subtle">Passionate about culture générale. Once on <em>Question pour un Champion</em> 🎯.</p>
-      </div>
-      <div class="about-photo-wrapper">
-        <img class="about-photo" src="photo.jpeg" alt="Jarod Lévy portrait">
+        <div class="socials intro-socials">
+          <a href="#" aria-label="Google Scholar" title="Scholar"><i class="icon-scholar"></i></a>
+          <a href="#" aria-label="GitHub" title="GitHub"><i class="icon-github"></i></a>
+          <a href="#" aria-label="Twitter" title="Twitter"><i class="icon-x"></i></a>
+          <a href="#" aria-label="LinkedIn" title="LinkedIn"><i class="icon-linkedin"></i></a>
+        </div>
       </div>
     </div>
-  </section>
 
-  <!-- TALKS / SLIDES -->
-  <section id="talks" class="reveal">
-    <div class="section-head">
-      <h2>Talks & slides</h2>
-    </div>
-    <div class="two-col">
-      <div>
-        <h3>Invited talks</h3>
-        <ul class="bullets">
-          <li>2025 — GRETSI (Strasbourg) • Institut Pasteur (Paris) • Meta FAIR MechInterp Group (London)</li>
-          <li>2024 — FAIR Conference Workshop (New York)</li>
-          <li>2022 — Cancer Symposium — DIVA Presentation (Institut Pasteur, Paris)</li>
-          <li>2019 — National Health Fair (Geneva)</li>
-        </ul>
+    <!-- PHD COUNTDOWN -->
+    <div class="countdown">
+      <h3>Remaining time until the end of my PhD</h3>
+      <div class="time-grid mono" id="time-grid">
+        <div><span id="yy">0</span><label>years</label></div>
+        <div><span id="mm">0</span><label>months</label></div>
       </div>
-      <div>
-        <h3>Slides</h3>
-        <ul class="bullets">
-          <li><a href="#" target="_blank">Brain2Qwerty (clean)</a></li>
-          <li><a href="#" target="_blank">Adapt your model not your preprocessing (FR)</a></li>
-        </ul>
+      <div class="bar-bg"><div id="progress-bar"></div></div>
+      <p id="countdown" class="subtle mono tiny"></p>
+    </div>
+
+    <!-- INTRO FOOTER -->
+    <div class="intro-footer">
+      <div class="intro-foot-left">
+        <p><strong>Jarod Lévy</strong><br>PhD Student, Meta FAIR × Inria</p>
       </div>
-    </div>
-  </section>
-
-  <!-- CV -->
-  <section id="cv" class="reveal">
-    <div class="cv-box">
-      <h2>Curriculum Vitae</h2>
-      <a class="cta" href="CV.pdf" target="_blank" rel="noopener">View CV (PDF)</a>
-      <p class="subtle tiny">Includes publications, community service, outside work (Chambre Noire, QPUC), and details.</p>
-    </div>
-  </section>
-
-  <!-- CONTACT -->
-  <section id="contact" class="reveal">
-    <div class="contact-card">
-      <h2>Contact</h2>
-      <p>Email: <a href="mailto:hello@jarodlevy.com">hello@jarodlevy.com</a></p>
-      <div class="socials center">
-        <a href="#" class="icon" aria-label="GitHub"><svg viewBox="0 0 24 24" width="22" height="22" fill="currentColor"><path d="M12 .5a12 12 0 0 0-3.79 23.4c.6.11.82-.26.82-.58l-.02-2.04c-3.34.73-4.04-1.61-4.04-1.61-.55-1.4-1.34-1.77-1.34-1.77-1.09-.75.08-.74.08-.74 1.2.09 1.83 1.24 1.83 1.24 1.07 1.83 2.81 1.3 3.5.99.11-.79.42-1.3.76-1.6-2.66-.3-5.47-1.33-5.47-5.93 0-1.31.47-2.38 1.24-3.22-.12-.3-.54-1.52.12-3.17 0 0 1.01-.32 3.3 1.23a11.5 11.5 0 0 1 6.01 0c2.29-1.55 3.3-1.23 3.3-1.23.66 1.65.24 2.87.12 3.17.77.84 1.24 1.9 1.24 3.22 0 4.61-2.81 5.62-5.49 5.92.43.37.81 1.1.81 2.22l-.01 3.29c0 .33.22.7.83.58A12 12 0 0 0 12 .5Z"/></svg></a>
-        <a href="#" class="icon" aria-label="LinkedIn"><svg viewBox="0 0 24 24" width="22" height="22" fill="currentColor"><path d="M4.98 3.5A2.5 2.5 0 1 1 5 8.5a2.5 2.5 0 0 1 0-5Zm.02 5.5H2v12h3V9Zm4 0H6.98v12H10v-6.4c0-3.56 4-3.85 4 0V21h3v-6.98c0-6.07-6.58-5.85-7.98-2.86V9Z"/></svg></a>
-        <a href="#" class="icon" aria-label="Scholar"><svg viewBox="0 0 24 24" width="22" height="22" fill="currentColor"><path d="M12 2 3 7l9 5 9-5-9-5Zm0 7L3 4v13a1 1 0 0 0 1.53.85L12 14l7.47 3.85A1 1 0 0 0 21 17V4l-9 5Z"/></svg></a>
-        <a href="#" class="icon" aria-label="X"><svg viewBox="0 0 24 24" width="22" height="22" fill="currentColor"><path d="M18.244 3H21l-6.5 7.429L22 21h-5.5l-4.3-5.5L7 21H4.244l6.9-7.885L2 3h5.5l3.9 5.062L18.244 3Zm-1.93 16h1.63L7.76 5h-1.63L16.314 19Z"/></svg></a>
+      <div class="intro-foot-center">
+        <p>© <span id="year"></span> Jarod Lévy. All rights reserved.</p>
+      </div>
+      <div class="intro-foot-right">
+        <p>📍 Paris (FR) &nbsp; | &nbsp; ✉️ <a href="mailto:jarod@meta.com">jarod@meta.com</a></p>
       </div>
     </div>
   </section>
 
-  <footer>
-    <p>© <span id="year"></span> Jarod Lévy — All rights reserved.</p>
-  </footer>
-
-  <!-- JS -->
   <script>
-    // Smooth scroll
-    document.querySelectorAll('a[href^="#"]').forEach(a=>{
-      a.addEventListener('click',e=>{
-        e.preventDefault();
-        document.querySelector(a.getAttribute('href')).scrollIntoView({behavior:"smooth"});
-      });
-    });
-
-    // Link highlight
-    const sections = document.querySelectorAll("section");
-    const navLinks = document.querySelectorAll("nav a");
-    window.addEventListener("scroll", ()=>{
-      let current = "";
-      sections.forEach(s=>{
-        const top = s.offsetTop - 140;
-        if (scrollY >= top) current = s.id;
-      });
-      navLinks.forEach(a=>{
-        a.classList.toggle("active", a.getAttribute("href")==="#"+current);
-      });
-    });
-
-    // Header hide on scroll down
-    let lastY = 0;
-    const nav = document.getElementById("navbar");
-    window.addEventListener("scroll", ()=>{
-      const y = window.scrollY;
-      if (y > lastY && y > 120) nav.classList.add("hide");
-      else nav.classList.remove("hide");
-      lastY = y;
-    });
-
-    // Reveal
-    const io = new IntersectionObserver((entries)=>{
-      entries.forEach(e=>{
-        if(e.isIntersecting){ e.target.classList.add("revealed"); io.unobserve(e.target); }
-      });
-    }, {threshold: 0.12});
-    document.querySelectorAll(".reveal").forEach(el=>io.observe(el));
-
-    // PhD countdown (simplified version)
+    // PhD countdown
     const start = new Date("Jan 1, 2025 00:00:00").getTime();
-    const end   = new Date("Jan 5, 2028 00:00:00").getTime();
-    const bar   = document.getElementById("progress-bar");
+    const end = new Date("Jan 5, 2028 00:00:00").getTime();
+    const bar = document.getElementById("progress-bar");
     const cdTxt = document.getElementById("countdown");
-    const out = {yy:document.getElementById("yy"), mm:document.getElementById("mm")};
-    
-    function diffYM(now, target){
+    const out = {yy: document.getElementById("yy"), mm: document.getElementById("mm")};
+
+    function diffYM(now, target) {
       const ms = Math.max(0, target - now);
-      const minutes = Math.floor(ms/60000);
-      const years   = Math.floor(minutes / (60*24*365.25));
-      const remY    = minutes - Math.floor(years*365.25*24*60);
-      const months  = Math.floor(remY / (60*24*30.44));
+      const minutes = Math.floor(ms / 60000);
+      const years = Math.floor(minutes / (60 * 24 * 365.25));
+      const remY = minutes - Math.floor(years * 365.25 * 24 * 60);
+      const months = Math.floor(remY / (60 * 24 * 30.44));
       return {years, months};
     }
-    
-    function updatePhD(){
+
+    function updatePhD() {
       const now = Date.now();
       const total = end - start;
-      const done  = Math.max(0, Math.min(total, now - start));
-      const pct   = (done/total)*100;
+      const done = Math.max(0, Math.min(total, now - start));
+      const pct = (done / total) * 100;
       if (bar) bar.style.width = pct.toFixed(2) + "%";
-    
+
       const d = diffYM(now, end);
       out.yy.textContent = d.years;
       out.mm.textContent = d.months;
-      cdTxt.textContent = `${pct.toFixed(1)}% elapsed`;
+      cdTxt.textContent = `${(100 - pct).toFixed(1)}% remaining`;
     }
     updatePhD();
-    setInterval(updatePhD, 1000*30);
-
-    // Year
+    setInterval(updatePhD, 1000 * 30);
     document.getElementById("year").textContent = new Date().getFullYear();
   </script>
+
 </body>
 </html>

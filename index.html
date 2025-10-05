@@ -58,21 +58,16 @@
       </div>
     </div>
 
-    <!-- ROBOTIC COUNTDOWN -->
-    <div class="countdown">
-      <h3>PhD Mission Timer</h3>
-      <div class="time-grid mono" id="time-grid">
-        <!-- JS fills these -->
-        <div><span id="yy">0</span><label>years</label></div>
-        <div><span id="mm">0</span><label>months</label></div>
-        <div><span id="dd">0</span><label>days</label></div>
-        <div><span id="hh">00</span><label>hours</label></div>
-        <div><span id="min">00</span><label>min</label></div>
-      </div>
-      <div class="bar-bg"><div id="progress-bar"></div></div>
-      <p id="countdown" class="subtle mono tiny"></p>
+  <!-- PHD COUNTDOWN -->
+  <div class="countdown">
+    <h3>Remaining time until the end of my PhD</h3>
+    <div class="time-grid mono" id="time-grid">
+      <div><span id="yy">0</span><label>years</label></div>
+      <div><span id="mm">0</span><label>months</label></div>
     </div>
-  </section>
+    <div class="bar-bg"><div id="progress-bar"></div></div>
+    <p id="countdown" class="subtle mono tiny"></p>
+  </div>
 
   <!-- LEAD PUBLICATIONS (Thomas Fel-style layout) -->
   <section id="lead" class="reveal">
@@ -308,44 +303,33 @@
     }, {threshold: 0.12});
     document.querySelectorAll(".reveal").forEach(el=>io.observe(el));
 
-    // PhD timer (to Jan 5, 2028)
+    // PhD countdown (simplified version)
     const start = new Date("Jan 1, 2025 00:00:00").getTime();
     const end   = new Date("Jan 5, 2028 00:00:00").getTime();
     const bar   = document.getElementById("progress-bar");
     const cdTxt = document.getElementById("countdown");
-    const out = {yy:document.getElementById("yy"), mm:document.getElementById("mm"), dd:document.getElementById("dd"), hh:document.getElementById("hh"), min:document.getElementById("min")};
-
-    function diffYMDHMin(now, target){
-      // Approximate calendar diff with months (30.44 d) and years (365.2425 d)
+    const out = {yy:document.getElementById("yy"), mm:document.getElementById("mm")};
+    
+    function diffYM(now, target){
       const ms = Math.max(0, target - now);
       const minutes = Math.floor(ms/60000);
-      const years   = Math.floor(minutes / (60*24*365.2425));
-      const remY    = minutes - Math.floor(years*365.2425*24*60);
+      const years   = Math.floor(minutes / (60*24*365.25));
+      const remY    = minutes - Math.floor(years*365.25*24*60);
       const months  = Math.floor(remY / (60*24*30.44));
-      const remM    = remY - Math.floor(months*30.44*24*60);
-      const days    = Math.floor(remM / (60*24));
-      const remD    = remM - days*24*60;
-      const hours   = Math.floor(remD / 60);
-      const mins    = remD - hours*60;
-      return {years, months, days, hours, mins};
+      return {years, months};
     }
-
+    
     function updatePhD(){
       const now = Date.now();
-      // progress
       const total = end - start;
       const done  = Math.max(0, Math.min(total, now - start));
       const pct   = (done/total)*100;
       if (bar) bar.style.width = pct.toFixed(2) + "%";
-
-      // pretty countdown
-      const d = diffYMDHMin(now, end);
-      out.yy.textContent  = d.years;
-      out.mm.textContent  = d.months;
-      out.dd.textContent  = d.days;
-      out.hh.textContent  = String(d.hours).padStart(2,"0");
-      out.min.textContent = String(d.mins).padStart(2,"0");
-      cdTxt.textContent = `ETA 2028-01-05 • ${pct.toFixed(1)}% elapsed`;
+    
+      const d = diffYM(now, end);
+      out.yy.textContent = d.years;
+      out.mm.textContent = d.months;
+      cdTxt.textContent = `${pct.toFixed(1)}% elapsed`;
     }
     updatePhD();
     setInterval(updatePhD, 1000*30);

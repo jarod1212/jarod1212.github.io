@@ -585,11 +585,11 @@ footer a:hover {
 /* WRITING - FANTASY MOSAIC (center last row + proper hover scale) */
 .writing-mosaic {
   display: grid;
-  grid-template-columns: repeat(10, 1fr);  /* exactly 10 per row */
+  grid-template-columns: repeat(10, 1fr); /* 10 per row */
   gap: 26px;
-  max-width: 1300px;                      /* increase width so they fit */
+  max-width: 1300px;
   margin: 40px auto;
-  justify-items: center;                  /* center each card in its grid cell */
+  justify-items: center;
 }
 
 .writing-card {
@@ -597,13 +597,12 @@ footer a:hover {
   height: 110px;
   transform: translate(var(--x), var(--y)) rotate(var(--r));
   animation: floaty 6s ease-in-out infinite;
-  animation-delay: calc(var(--x) * 0.1s);
   will-change: transform;
 }
 
-.writing-card:hover {
-  animation-play-state: paused; /* freeze float while hovering */
-  z-index: 3;
+.writing-card:hover .card-inner {
+  transform: scale(1.12) translateY(-2px);
+  box-shadow: 0 12px 36px rgba(0,0,0,0.4);
 }
 
 /* inner wrapper actually draws the tile and scales on hover */
@@ -684,43 +683,103 @@ footer a:hover {
   color: var(--accent);
 }
 
-/* MODAL STYLE FOR WRITING ARTICLES */
+/* === ARTICLE MODAL (SCROLLABLE READING VERSION) === */
 .article-modal {
   position: fixed;
   inset: 0;
-  display: none;                    /* hidden by default */
-  justify-content: center;
+  background: rgba(0, 0, 0, 0.7);
+  display: flex;
   align-items: center;
-  background: rgba(0, 0, 0, 0.75);  /* dark transparent background */
-  backdrop-filter: blur(6px);       /* soft blur behind */
-  z-index: 3000;
+  justify-content: center;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.3s ease;
+  z-index: 999;
+  backdrop-filter: blur(6px);
 }
 
 .article-modal.active {
-  display: flex;                    /* becomes visible when active */
-  animation: fadeIn 0.25s ease;
+  opacity: 1;
+  pointer-events: auto;
 }
 
+/* modal box */
 .modal-content {
   background: var(--card);
+  border-radius: 18px;
+  padding: 40px 60px 80px; /* extra bottom padding fixes the cutoff */
+  width: 90%;
+  max-width: 900px;
+  max-height: calc(90vh - 40px); /* a bit taller than before */
+  overflow-y: auto; /* enables scrolling */
   color: var(--fg);
-  border: 1px solid var(--line);
-  border-radius: 16px;
-  box-shadow: var(--shadow);
-  padding: 28px;
-  max-width: 700px;
-  max-height: 80vh;
-  overflow-y: auto;
-  position: relative;
-  animation: slideUp 0.3s ease;
+  box-shadow: 0 20px 60px rgba(0,0,0,0.6);
+  transform: scale(0.92) translateY(20px);
+  opacity: 0;
+  transition: all 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+  line-height: 1.7;
+  scroll-padding-bottom: 100px; /* ensures the final paragraph clears the viewport */
 }
 
-@keyframes fadeIn {
-  from { opacity: 0; }
-  to   { opacity: 1; }
+.article-modal.active .modal-content {
+  transform: scale(1) translateY(0);
+  opacity: 1;
 }
 
-@keyframes slideUp {
-  from { transform: translateY(20px); opacity: 0; }
-  to   { transform: translateY(0); opacity: 1; }
+/* title */
+#modal-title {
+  font-family: 'Playfair Display', serif;
+  font-size: 28px;
+  font-weight: 700;
+  line-height: 1.3;
+  margin-bottom: 22px;
+  text-align: left;
+  color: var(--fg);
+}
+
+/* text */
+#modal-text {
+  font-size: 16px;
+  font-family: Georgia, 'Times New Roman', serif;
+  color: var(--fg);
+  text-align: justify;
+}
+
+#modal-text p {
+  margin-bottom: 1.3em;
+}
+
+#modal-text em {
+  font-style: italic;
+  color: inherit; /* no more green */
+}
+
+/* close button */
+.close-modal {
+  position: absolute;
+  top: 18px;
+  right: 22px;
+  font-size: 26px;
+  color: var(--muted);
+  background: none;
+  border: none;
+  cursor: pointer;
+  transition: 0.2s ease;
+}
+
+.close-modal:hover {
+  color: var(--accent);
+  transform: rotate(90deg);
+}
+
+/* scrollbar aesthetics */
+.modal-content::-webkit-scrollbar {
+  width: 8px;
+}
+.modal-content::-webkit-scrollbar-thumb {
+  background-color: var(--accent);
+  border-radius: 10px;
+}
+.modal-content::-webkit-scrollbar-track {
+  background: transparent;
 }

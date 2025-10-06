@@ -108,7 +108,7 @@
           <a class="ghost" href="https://ai.meta.com/research/publications/brain-to-text-decoding-a-non-invasive-approach-via-typing/" target="_blank">Meta Blog Post</a>
           <a class="ghost" href="https://medium.com/predict/metas-ai-can-now-read-your-mind-yes-really-117916343757" target="_blank">Medium</a>
           
-          <div class="links-subhead">They talk about us:</div>
+          <div class="links-subhead">They talk about our paper:</div>
           <a class="ghost" href="https://www.bbc.com/audio/play/w3ct5wnj" target="_blank">BBC</a>
           <a class="ghost" href="https://www.forbes.com/sites/luisromero/2025/02/19/metas-mind-reader-brain2qwerty-translates-thoughts-into-text/" target="_blank">Forbes</a>
           <a class="ghost" href="https://www.technologyreview.com/2025/02/07/1111292/meta-has-an-ai-for-brain-typing-but-its-stuck-in-the-lab/" target="_blank">MIT Technology Review</a>
@@ -121,20 +121,22 @@
       </div>
     </article>
 
-    <!-- <article class="pub-row">
+    <article class="pub-row">
       <div class="pub-rail"><span class="chip">GRETSI • 2025</span></div>
       <div class="pub-illustration">
-        <img src="https://images.unsplash.com/photo-1518770660439-4636190af475?w=1000&q=80" alt="MEG EEG illustration">
+        <img src="table_gretsi.png" alt="GRETSI main figure" class="gretsi-img">
+        <img src="main_figure_GRETSI.png" alt="GRETSI figure 2" class="gretsi-img" style="margin-top: 18px;">
       </div>
       <div class="pub-body">
-        <h3>Deep Learning sur les signaux M/EEG: Adaptez votre modèle, pas votre prétraitement</h3>
+        <h3>Influence of EEG/MEG signal preprocessing on the performance of deep learning models</h3>
         <p class="authors">J. Lévy, H. J. Banville, J.-R. King, S. Pinet, J. Rapin, S. d’Ascoli, T. Moreau</p>
         <p class="summary">
-          Argument and evidence for adapting the model to raw M/EEG rather than aggressive preprocessing.
-          Benchmarks and ablations supporting model-first pipelines.
+          This study investigates the impact of preprocessing EEG (electroencephalography) and MEG (magnetoencephalography) signals on the performance of deep learning models. Our results show that minimal preprocessing significantly reduces computational cost while maintaining performance comparable to more complex approaches, across datasets and models. Our observations suggest that model choice has a more decisive influence on the outcome than the complexity of the applied preprocessing.
         </p>
         <div class="links">
-          <a class="ghost" href="https://gretsi.fr/data/colloque/pdf/2025_levy1559.pdf" target="_blank">Paper (PDF)</a>
+          <a class="ghost" href="https://gretsi.fr/data/colloque/pdf/2025_levy1559.pdf" target="_blank">Paper (French)</a>
+          <a class="ghost" href="gretsi_english_version.pdf" target="_blank">Paper (English)</a>
+          <a class="ghost" href="gretsi_slides.pptx" target="_blank">Slides</a>
         </div>
       </div>
     </article>
@@ -142,41 +144,102 @@
     <h3 class="section-subhead">Collaborations</h3>
 
     <article class="pub-row">
-      <div class="pub-rail"><span class="chip">2025</span></div>
-      <div class="pub-illustration">
-        <img src="https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?w=800&q=80" alt="Language production illustration">
+      <div class="pub-rail"><span class="chip chip-primary">Under Review • 2025</span></div>
+      <div class="pub-illustration" style="display: flex; align-items: center;">
+        <video src="lucy_animation.mov" autoplay loop muted playsinline style="width: 100%; height: auto; border-radius: 12px; border: 1px solid var(--line); display: block; margin: 0 auto;"></video>
       </div>
       <div class="pub-body">
         <h3>From Thought to Action: Hierarchy of Neural Dynamics for Language Production</h3>
         <p class="authors">M. Zhang, J. Lévy, S. d’Ascoli, J. Rapin, F. Alario, P. Bourdillon, S. Pinet, J.-R. King</p>
-      </div>
-    </article>
-
-    <article class="pub-row">
-      <div class="pub-rail"><span class="chip">JCO CCI • 2024</span></div>
-      <div class="pub-illustration">
-        <img src="https://images.unsplash.com/photo-1559757175-08fda9a0087b?w=800&q=80" alt="Oncology illustration">
-      </div>
-      <div class="pub-body">
-        <h3>Patients facing large language models in oncology: A narrative review</h3>
-        <p class="authors">C. Raynaud, D. Wu, J. Lévy, M. Marengo, J.-E. Bibault</p>
+        <p class="summary">
+          We used magnetoencephalography (MEG) and electroencephalography (EEG) to record the brain activity of 35 skilled typists as they composed sentences. This unique approach reveals how the brain organizes language production across multiple levels—from context to words, syllables, and letters. Each level of representation emerges and overlaps in time, forming a dynamic hierarchy of neural codes that orchestrates the transformation of thought into language.
+        </p>
+        <div class="links">
+            <a class="ghost" href="https://arxiv.org/abs/2502.07429" target="_blank">Paper (PDF)</a>
+        </div>
       </div>
     </article>
 
     <article class="pub-row">
       <div class="pub-rail"><span class="chip">Brain • 2022</span></div>
-      <div class="pub-illustration">
-        <img src="https://images.unsplash.com/photo-1534759846116-5792a4a6bb47?w=800&q=80" alt="Amygdala circuits illustration">
+      <div class="pub-illustration" style="display: flex; align-items: center;">
+        <img src="sepsis_main_figure.png" alt="Amygdala circuits illustration" style="max-height: 250px; width: auto; display: block; margin: 0 auto;">
       </div>
       <div class="pub-body">
         <h3>Silencing of amygdala circuits during sepsis prevents anxiety-related behaviours</h3>
         <p class="authors">L. Bourhy, A. Mazeraud, L. H. A. Costa, J. Lévy, D. Rei, E. Hecquet, et al.</p>
+        <p class="summary">
+          Sepsis can trigger lasting psychiatric effects such as anxiety and PTSD, but the brain mechanisms remain unclear. In mice, sepsis caused overactivation of a specific fear circuit linking the amygdala to the bed nucleus of the stria terminalis. This rewiring persisted after recovery and led to anxiety-like behaviors. Temporarily silencing this circuit during the acute phase of sepsis or treating with levetiracetam prevented these effects. Targeting fear circuits early may block post-sepsis psychiatric disorders.
+        </p>
+        <div class="links">
+            <a class="ghost" href="https://pmc.ncbi.nlm.nih.gov/articles/PMC9128826/" target="_blank">Paper (PDF)</a>
+        </div>
       </div>
     </article>
 
-    <h3 class="section-subhead">Other Works</h3> -->
-    <!-- This is a placeholder for other works. You can add content here later. -->
-  </section>
+    <article class="pub-row">
+      <div class="pub-rail"><span class="chip">JCO CCI • 2024</span></div>
+      <div class="pub-illustration" style="display: flex; align-items: center;">
+        <img src="oncology_illu.png" alt="Oncology illustration" style="max-height: 250px; width: auto; display: block; margin: 0 auto;">
+      </div>
+      <div class="pub-body">
+        <h3>Patients facing large language models in oncology: A narrative review</h3>
+        <p class="authors">C. Raynaud, D. Wu, J. Lévy, M. Marengo, J.-E. Bibault</p>
+        <p class="summary">
+          The integration of large language models (LLMs) into oncology is transforming patients' journeys through education, diagnosis, treatment monitoring, and follow-up. This review examines the current landscape, potential benefits, and associated ethical and regulatory considerations of the application of LLMs for patients in the oncologic domain.
+        </p>
+        <div class="links">
+            <a class="ghost" href="https://ascopubs.org/doi/10.1200/CCI-24-00149" target="_blank">Paper (PDF)</a>
+        </div>
+      </div>
+    </article>
+
+    <article class="pub-row">
+      <div class="pub-rail"><span class="chip chip-primary">Under Review • 2025</span></div>
+      <div class="pub-illustration" style="display: flex; align-items: center;">
+        <img src="SLM_LLM_radiology.png" alt="SLM LLM illustration" style="max-height: 250px; display: block; margin: 0 auto;">
+      </div>
+      <div class="pub-body">
+        <h3>Benchmarking LLMs and SLMs for patient reported outcomes </h3>
+        <p class="authors">M. Marengo, J. Lévy, J.-E. Bibault</p>
+        <p class="summary">
+          Large language models (LLMs) like GPT-4 can already turn patient-reported outcomes into clear medical summaries, helping clinicians focus on what matters most. But privacy remains a major hurdle. This study compares compact small language models (SLMs) to LLMs for summarizing patient Q&A forms in radiotherapy. The results show that while SLMs still trail in accuracy, they offer a compelling path toward secure, efficient, and privacy-preserving AI in healthcare.
+        </p>
+        <div class="links">
+            <a class="ghost" href="https://arxiv.org/abs/2412.16291" target="_blank">Paper (PDF)</a>
+        </div>
+      </div>
+    </article>
+
+    <h3 class="section-subhead">Other Works</h3>
+
+    <div class="other-works-list" style="display:grid; grid-template-columns:repeat(auto-fit,minmax(280px,1fr)); gap:16px; max-width:1200px; margin:16px auto;">
+      <article class="other-work" style="border:1px solid var(--line); border-radius:12px; padding:16px; background:var(--card); box-shadow:var(--shadow);">
+        <h4 style="margin:0 0 6px; font-size:1rem;">
+          <a href="robust_fetus_segmentation.pdf" target="_blank" rel="noopener" style="color:var(--fg); text-decoration:none;">
+            Towards robust fetus segmentation from MRI imaging: Accelerating annotations and diving into high semantic features
+          </a>
+        </h4>
+        <p class="mono small subtle" style="margin:0 0 10px;">Jarod Lévy, Charlotte Godard, Jean-Baptiste Masson</p>
+        <p style="margin:0;">
+          We designed a pipeline to make the creation and analysis of medical databases more efficient, using a tablet app to ease data annotation and a self-supervised inpainting model to extract meaningful features. Applied to the LUMIERE pregnancy MRI dataset, this work contributes to fetal development research and could be extended to other medical imaging projects.
+        </p>
+      </article>
+    </div>
+
+    <div class="other-works-list" style="display:grid; grid-template-columns:repeat(auto-fit,minmax(280px,1fr)); gap:16px; max-width:1200px; margin:16px auto;">
+      <article class="other-work" style="border:1px solid var(--line); border-radius:12px; padding:16px; background:var(--card); box-shadow:var(--shadow);">
+        <h4 style="margin:0 0 6px; font-size:1rem;">
+          <a href="from_trees_to_continuous_embeddings.pdf" target="_blank" rel="noopener" style="color:var(--fg); text-decoration:none;">
+            From Trees to Continuous Embeddings and Back: Hyperbolic Hierarchical Clustering — A Comprehensive Report
+          </a>
+        </h4>
+        <p class="mono small subtle" style="margin:0 0 10px;">Jarod Lévy, Paul Meddeb</p>
+        <p style="margin:0;">
+          Extended analysis of hyperbolic hierarchical clustering across text and synthetic datasets introducing dendrogram purity. Discusses computational limits of the triplet strategy and proposes an alternative sampling approach.
+        </p>
+      </article>
+    </div>
 
   <!-- WEEKLY -->
   <section id="weekly" class="reveal">

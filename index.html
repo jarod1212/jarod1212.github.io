@@ -128,7 +128,7 @@
         <img src="main_figure_GRETSI.png" alt="GRETSI figure 2" class="gretsi-img" style="margin-top: 18px;">
       </div>
       <div class="pub-body">
-        <h3>Influence of EEG/MEG signal preprocessing on the performance of deep learning models</h3>
+        <h3>Deep Learning on M/EEG signals: Adapt your model, not your preprocessing</h3>
         <p class="authors">J. Lévy, H. J. Banville, J.-R. King, S. Pinet, J. Rapin, S. d’Ascoli, T. Moreau</p>
         <p class="summary">
           This study investigates the impact of preprocessing EEG (electroencephalography) and MEG (magnetoencephalography) signals on the performance of deep learning models. Our results show that minimal preprocessing significantly reduces computational cost while maintaining performance comparable to more complex approaches, across datasets and models. Our observations suggest that model choice has a more decisive influence on the outcome than the complexity of the applied preprocessing.
@@ -246,7 +246,26 @@
     <div class="section-head">
       <h2>Writing</h2>
     </div>
-    <p class="subtle mono" style="text-align: center;">This section is under construction. Stay tuned for updates!</p>
+
+    <p class="subtle mono">During the first 20 weeks of my PhD, I wrote short articles about what makes me think, smile, or question. You can click to read ! 
+      <br><br>
+    I also have a Substack account:
+    <a href="https://substack.com/@jarodlevy" target="_blank" rel="noopener noreferrer" style="color:var(--accent);">
+      substack.com/@jarodlevy
+    </a>
+    </p>
+
+  
+    <div class="writing-mosaic" id="writing-mosaic"></div>
+  
+    <!-- Modal -->
+    <div id="article-modal" class="article-modal">
+      <div class="modal-content">
+        <button class="close-modal">&times;</button>
+        <h3 id="modal-title">Placeholder Title</h3>
+        <p id="modal-text">Placeholder article content</p>
+      </div>
+    </div>
   </section>
 
   <!-- OUTSIDE WORK -->
@@ -272,16 +291,16 @@
     </div>
     <div class="intro-foot-right">
       <div class="socials footer-socials" aria-label="Social links">
-        <a href="#" title="Google Scholar" aria-label="Google Scholar">
+        <a href="https://scholar.google.com/citations?user=jx5DNj0AAAAJ&hl=fr&oi=sra" title="Google Scholar" aria-label="Google Scholar">
           <iconify-icon icon="simple-icons:googlescholar"></iconify-icon>
         </a>
-        <a href="#" title="GitHub" aria-label="GitHub">
+        <a href="https://github.com/jarod1212" title="GitHub" aria-label="GitHub">
           <iconify-icon icon="mdi:github"></iconify-icon>
         </a>
-        <a href="#" title="X (Twitter)" aria-label="X (Twitter)">
+        <a href="https://x.com/JarodLevy" title="X (Twitter)" aria-label="X (Twitter)">
           <iconify-icon icon="simple-icons:x"></iconify-icon>
         </a>
-        <a href="#" title="LinkedIn" aria-label="LinkedIn">
+        <a href="https://www.linkedin.com/in/jarod-l%C3%A9vy-645b4214b/" title="LinkedIn" aria-label="LinkedIn">
           <iconify-icon icon="mdi:linkedin"></iconify-icon>
         </a>
       </div>
@@ -289,5 +308,62 @@
   </footer>
 
   <script defer src="phd-timer.js"></script>
+
+  <script>
+    document.addEventListener("DOMContentLoaded", () => {
+      const container = document.getElementById("writing-mosaic");
+    
+      const articles = Array.from({ length: 20 }, (_, i) => ({
+        id: i + 1,
+        title: `Week ${i + 1} — Placeholder Title`,
+        text: "This is a placeholder article. Replace with your real weekly writing.",
+        img: `https://picsum.photos/200/200?random=${i + 1}`
+      }));
+    
+      // Create each vignette with random offset and rotation
+      articles.forEach((a) => {
+        const div = document.createElement("div");
+        div.className = "writing-card funky";
+        div.dataset.article = a.id;
+        div.style.setProperty("--r", `${(Math.random() - 0.5) * 8}deg`);
+        div.style.setProperty("--x", `${(Math.random() - 0.5) * 20}px`);
+        div.style.setProperty("--y", `${(Math.random() - 0.5) * 20}px`);
+        div.innerHTML = `
+          <div class="card-inner">
+            <img src="${a.img}" alt="Article ${a.id}">
+            <div class="card-label"><h5>${a.title}</h5></div>
+          </div>
+        `;
+        container.appendChild(div);
+      });
+    
+      const modal = document.getElementById("article-modal");
+      const closeBtn = modal.querySelector(".close-modal");
+      const modalTitle = document.getElementById("modal-title");
+      const modalText = document.getElementById("modal-text");
+    
+      container.addEventListener("click", (e) => {
+        const card = e.target.closest(".writing-card");
+        if (!card) return;
+        const id = +card.dataset.article;
+        const a = articles[id - 1];
+        modalTitle.textContent = a.title;
+        modalText.textContent = a.text;
+        modal.classList.add("active");
+        document.body.style.overflow = "hidden";
+      });
+    
+      const closeModal = () => {
+        modal.classList.remove("active");
+        document.body.style.overflow = "";
+      };
+      closeBtn.addEventListener("click", closeModal);
+      modal.addEventListener("click", (e) => {
+        if (e.target === modal) closeModal();
+      });
+    });
+    </script>
+
+
 </body>
 </html>

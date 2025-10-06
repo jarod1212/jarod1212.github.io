@@ -287,7 +287,8 @@ section {
   margin-right: auto;
 }
 .pub-body h3 {
-  margin-top: 0;
+  font-size: 28px; /* was 26px */
+  line-height: 1.4; /* slightly increased for better readability */
 }
 .authors {
   color: var(--muted);
@@ -565,4 +566,161 @@ footer a:hover {
   .bar-bg {
     max-width: 90%;
   }
+}
+
+/* OTHER WORK */
+.other-work h4 {
+  font-size: 1.2rem; /* was 1rem */
+  line-height: 1.4;  /* slightly increased for better readability */
+}
+.other-work h4 a {
+  color: var(--accent); /* Make the title color the accent color */
+  text-decoration: none; /* Remove underline by default */
+}
+.other-work h4 a:hover {
+  text-decoration: underline; /* Add underline on hover */
+  filter: brightness(1.2); /* Slightly brighten the color on hover */
+}
+
+/* WRITING - FANTASY MOSAIC (center last row + proper hover scale) */
+.writing-mosaic {
+  display: grid;
+  grid-template-columns: repeat(10, 1fr);  /* exactly 10 per row */
+  gap: 26px;
+  max-width: 1300px;                      /* increase width so they fit */
+  margin: 40px auto;
+  justify-items: center;                  /* center each card in its grid cell */
+}
+
+.writing-card {
+  width: 110px;
+  height: 110px;
+  transform: translate(var(--x), var(--y)) rotate(var(--r));
+  animation: floaty 6s ease-in-out infinite;
+  animation-delay: calc(var(--x) * 0.1s);
+  will-change: transform;
+}
+
+.writing-card:hover {
+  animation-play-state: paused; /* freeze float while hovering */
+  z-index: 3;
+}
+
+/* inner wrapper actually draws the tile and scales on hover */
+.writing-card .card-inner {
+  width: 100%;
+  height: 100%;
+  border-radius: 14px;
+  overflow: hidden;
+  border: 1px solid var(--line);
+  background: var(--card);
+  box-shadow: var(--shadow);
+  cursor: pointer;
+  transition: transform 0.28s cubic-bezier(0.23, 1, 0.32, 1),
+              box-shadow 0.28s ease, filter 0.25s ease;
+}
+
+.writing-card:hover .card-inner {
+  transform: scale(1.12) translateY(-2px);  /* ← grows on hover */
+  box-shadow: 0 12px 36px rgba(0,0,0,0.4);
+}
+
+.writing-card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  filter: brightness(0.85);
+  transition: filter 0.25s ease;
+}
+.writing-card:hover img { filter: brightness(1); }
+
+.card-label {
+  position: absolute;
+  bottom: 0;
+  left: 0; right: 0;
+  padding: 4px;
+  background: rgba(0,0,0,0.6);
+  text-align: center;
+  pointer-events: none;
+}
+.card-label h5 {
+  font-size: 11px;
+  margin: 0;
+  color: var(--fg);
+  line-height: 1.2;
+}
+
+/* gentle bob on the OUTER wrapper only */
+@keyframes floaty {
+  0%   { transform: translate(var(--x), var(--y)) rotate(var(--r)); }
+  50%  { transform: translate(calc(var(--x) + 0px), calc(var(--y) - 4px)) rotate(calc(var(--r) * 1.2)); }
+  100% { transform: translate(var(--x), var(--y)) rotate(var(--r)); }
+}
+
+/* FIX CLOSE BUTTON STYLE */
+.close-modal {
+  position: absolute;
+  top: 12px;
+  right: 16px;
+  font-size: 22px;
+  font-weight: 500;
+  line-height: 1;
+  color: var(--muted);
+  background: none;
+  border: none;
+  border-radius: 50%;
+  width: 28px;
+  height: 28px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: background 0.2s ease, color 0.2s ease;
+}
+
+.close-modal:hover {
+  background: rgba(255, 255, 255, 0.1);
+  color: var(--accent);
+}
+
+/* MODAL STYLE FOR WRITING ARTICLES */
+.article-modal {
+  position: fixed;
+  inset: 0;
+  display: none;                    /* hidden by default */
+  justify-content: center;
+  align-items: center;
+  background: rgba(0, 0, 0, 0.75);  /* dark transparent background */
+  backdrop-filter: blur(6px);       /* soft blur behind */
+  z-index: 3000;
+}
+
+.article-modal.active {
+  display: flex;                    /* becomes visible when active */
+  animation: fadeIn 0.25s ease;
+}
+
+.modal-content {
+  background: var(--card);
+  color: var(--fg);
+  border: 1px solid var(--line);
+  border-radius: 16px;
+  box-shadow: var(--shadow);
+  padding: 28px;
+  max-width: 700px;
+  max-height: 80vh;
+  overflow-y: auto;
+  position: relative;
+  animation: slideUp 0.3s ease;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to   { opacity: 1; }
+}
+
+@keyframes slideUp {
+  from { transform: translateY(20px); opacity: 0; }
+  to   { transform: translateY(0); opacity: 1; }
 }

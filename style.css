@@ -141,6 +141,27 @@ a:hover {
   gap: 14px;
   margin-top: 20px;
 }
+.intro-socials a {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  border-radius: 10px;
+  background: var(--card);
+  border: 1px solid var(--line);
+  color: var(--fg);
+  transition: all 0.2s ease;
+}
+.intro-socials a:hover {
+  transform: translateY(-2px);
+  background: #374151;
+}
+/* icon size inside social buttons */
+.intro-socials iconify-icon {
+  font-size: 20px; /* inherits color from the link */
+  line-height: 1;
+}
 
 /* COUNTDOWN */
 .countdown {
@@ -464,7 +485,7 @@ footer a:hover {
   justify-content: center;
 }
 
-/* reuse social button styles for footer (also used by intro) */
+/* reuse social button styles for footer */
 .intro-socials a,
 .footer-socials a {
   display: inline-flex;
@@ -483,6 +504,7 @@ footer a:hover {
   transform: translateY(-2px);
   background: #374151;
 }
+/* icon size inside social buttons */
 .intro-socials iconify-icon,
 .footer-socials iconify-icon {
   font-size: 20px;
@@ -564,6 +586,11 @@ footer a:hover {
   will-change: transform;
 }
 
+.writing-card:hover .card-inner {
+  transform: scale(1.12) translateY(-2px);
+  box-shadow: 0 12px 36px rgba(0,0,0,0.4);
+}
+
 /* inner wrapper actually draws the tile and scales on hover */
 .writing-card .card-inner {
   width: 100%;
@@ -614,6 +641,32 @@ footer a:hover {
   0%   { transform: translate(var(--x), var(--y)) rotate(var(--r)); }
   50%  { transform: translate(calc(var(--x) + 0px), calc(var(--y) - 4px)) rotate(calc(var(--r) * 1.2)); }
   100% { transform: translate(var(--x), var(--y)) rotate(var(--r)); }
+}
+
+/* FIX CLOSE BUTTON STYLE */
+.close-modal {
+  position: absolute;
+  top: 12px;
+  right: 16px;
+  font-size: 22px;
+  font-weight: 500;
+  line-height: 1;
+  color: var(--muted);
+  background: none;
+  border: none;
+  border-radius: 50%;
+  width: 28px;
+  height: 28px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: background 0.2s ease, color 0.2s ease;
+}
+
+.close-modal:hover {
+  background: rgba(255, 255, 255, 0.1);
+  color: var(--accent);
 }
 
 /* === ARTICLE MODAL (SCROLLABLE READING VERSION) === */
@@ -687,29 +740,21 @@ footer a:hover {
   color: inherit; /* no more green */
 }
 
-/* Consolidated close button (merges both earlier blocks to keep current look/behavior) */
+/* close button */
 .close-modal {
   position: absolute;
   top: 18px;
   right: 22px;
-  width: 28px;
-  height: 28px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
   font-size: 26px;
-  font-weight: 500;
-  line-height: 1;
   color: var(--muted);
   background: none;
   border: none;
-  border-radius: 50%;
   cursor: pointer;
   transition: 0.2s ease;
 }
+
 .close-modal:hover {
   color: var(--accent);
-  background: rgba(255, 255, 255, 0.1);
   transform: rotate(90deg);
 }
 
@@ -776,7 +821,65 @@ footer a:hover {
   align-items: center;
 }
 
-/* AUDIO PLAYER (kept) */
+/* AUDIO */
+.audio-block {
+  width: 100%;
+  max-width: 520px;
+}
+
+.set-title {
+  font-style: italic;
+  font-size: 15px;
+  color: var(--muted);
+  margin-bottom: 6px;
+  text-align: center;
+}
+
+.outside-media audio {
+  width: 100%;
+  border-radius: 12px;
+  background: var(--card);
+  border: 1px solid var(--line);
+  box-shadow: var(--shadow);
+}
+
+/* VIDEO */
+.outside-media video {
+  width: 100%;
+  max-width: 1000px;
+  border-radius: 16px;
+  border: 1px solid var(--line);
+  box-shadow: 0 14px 50px rgba(0, 0, 0, 0.45);
+  cursor: pointer;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.outside-media video:hover {
+  transform: scale(1.02);
+  box-shadow: 0 18px 60px rgba(0, 0, 0, 0.55);
+}
+
+/* VIDEO GRID (for Chambre Noire) */
+.outside-video-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+  gap: 28px;
+  justify-items: center;
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+  .outside-card {
+    padding: 30px 22px;
+  }
+  .outside-media video {
+    max-width: 100%;
+  }
+}
+
+/* === OUTSIDE WORK AUDIO/VIDEO IMPROVEMENTS === */
+
+/* AUDIO PLAYER */
 .outside-media audio {
   width: 100%;
   max-width: 520px;
@@ -787,17 +890,24 @@ footer a:hover {
   overflow: hidden;
   height: 40px;
 }
-audio::-webkit-media-controls-panel { background-color: #0f172a; }
+
+audio::-webkit-media-controls-panel {
+  background-color: #0f172a;
+}
+
 audio::-webkit-media-controls-play-button,
 audio::-webkit-media-controls-volume-slider-container,
-audio::-webkit-media-controls-timeline { filter: invert(100%); }
+audio::-webkit-media-controls-timeline {
+  filter: invert(100%);
+}
+
 audio::-webkit-media-controls-current-time-display,
 audio::-webkit-media-controls-time-remaining-display {
   color: var(--fg);
   font-family: Inter, sans-serif;
 }
 
-/* VIDEO WRAPPER, ratios, hover, hint (kept) */
+/* VIDEO WRAPPER */
 .video-wrapper {
   position: relative;
   overflow: hidden;
@@ -852,13 +962,14 @@ audio::-webkit-media-controls-time-remaining-display {
   opacity: 1;
 }
 
-/* VIDEO GRID (kept: newer flex version) */
+/* VIDEO GRID */
 .outside-video-grid {
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
   gap: 24px;
 }
+
 @media (max-width: 900px) {
   .outside-video-grid {
     flex-direction: column;
@@ -897,62 +1008,4 @@ audio::-webkit-media-controls-time-remaining-display {
     grid-template-columns: 1fr;
     gap: 28px;
   }
-}
-
-/* === OTHER WORKS LINK STYLE === */
-.other-work a {
-  color: #a5e4ff; /* softer version of accent — feels clickable but not neon */
-  font-weight: 600;
-  text-decoration: underline transparent;
-  transition: color 0.25s ease, text-decoration-color 0.25s ease, transform 0.25s ease;
-}
-
-.other-work a:hover {
-  color: var(--accent); /* full bright cyan */
-  text-decoration-color: var(--accent);
-  transform: translateY(-1px);
-  cursor: pointer;
-}
-.other-work a::after {
-  content: " ↗";
-  opacity: 0;
-  transition: opacity 0.25s ease;
-  font-size: 0.9em;
-  color: var(--accent);
-}
-
-.other-work a:hover::after {
-  opacity: 1;
-}
-
-/* === MOBILE FIXES === */
-/* Cleaned to avoid repeating Intro layout already handled at 1100px */
-@media (max-width: 900px) {
-  /* NAV horizontal scroll */
-  .site-nav nav {
-    flex-wrap: nowrap;
-    overflow-x: auto;
-    scrollbar-width: none;
-  }
-  .site-nav nav::-webkit-scrollbar { display: none; }
-  .site-nav nav a { flex: 0 0 auto; white-space: nowrap; }
-
-  /* Writing grid scaling */
-  .writing-mosaic {
-    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
-    gap: 18px;
-    max-width: 90%;
-  }
-  .writing-card { width: 100px; height: 100px; }
-
-  /* General adjustments */
-  body { font-size: 15px; }
-}
-
-@media (max-width: 600px) {
-  .writing-mosaic { grid-template-columns: repeat(4, 1fr); gap: 14px; }
-  .writing-card { width: 80px; height: 80px; }
-  .intro-photo { width: 100px; }
-  .site-nav .brand { font-size: 18px; }
-  .site-nav nav a { padding: 8px 12px; }
 }

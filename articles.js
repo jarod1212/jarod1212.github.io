@@ -133,9 +133,7 @@ const articles = [
           <p>Nous montrons qu’un code neuronal dynamique permet d’anticiper et d’enchaîner ces étapes de manière fluide, en représentant simultanément les frappes en cours et celles à venir.</p>
       
           <p>C'est un pas de plus vers la compréhension du langage dans le cerveau, une capacité clé de l’intelligence humaine.</p>
-      
-          <p>Plus de détails sur ce blog post de <em>AI at Meta</em> !</p>
-      
+            
           <p class="subtle small">
             [1] <em>Brain-to-Text Decoding: A Non-Invasive Approach via Typing</em> — <a href="https://lnkd.in/eRMHFNpZ" target="_blank">Lien</a><br>
             De : Jarod Lévy, Lucy (Mingfang) Zhang, Svetlana Pinet, Jérémy Rapin, Hubert Banville, Stéphane d'Ascoli*, Jean-Rémi King*<br><br>
@@ -249,7 +247,7 @@ const articles = [
         text: `
           <p>Cette semaine, un post un peu spécial : je suis passé à la télévision samedi dernier sur France 3 ! J’ai eu la chance de participer à l’émission <em>Question pour un champion</em> aux côtés de Samuel Étienne.</p>
       
-          <p>Le replay est disponible ici : <a href="https://lnkd.in/erxPNnBA" target="_blank">Lien</a></p>
+          <p>Le replay est disponible ici : <a href="https://drive.google.com/file/d/1rL35X4b1c1GT5bEEbDQAMf_qiTTaFhoY/view?usp=drive_link" target="_blank">Lien</a></p>
       
           <p>Un immense merci aux équipes de l’émission qui savent accueillir chaque candidat avec bienveillance, respect et empathie (et qui aident beaucoup à gérer le stress !). Merci aussi à Marie-Claire, Quentin et Kevin, d’excellents partenaires de jeu, avec qui j’ai passé un super moment.</p>
       
